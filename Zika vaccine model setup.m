@@ -496,13 +496,13 @@ v\[Mu]->365/7.8(*Mosquito mortality rate*),
 
 (*Calibrated seasonality parameters*)
 seasonalityAmplitude->7/10,
-seasonalityPhase->-3*Pi/10
+seasonalityPhase->\[Pi]/5
 }},
 Join[
 mostpars,
 (*Mosquito birth rate computed to hold at carrying capacity *)
 {\[Beta]vh->1.1 betaHV,
-(MosqBirth->(v\[Mu]/.mostpars)*mosquitoPopulation[country]*(1-seasonalityAmplitude*Cos[seasonalityPhase+t*2*Pi])/.mostpars)
+(MosqBirth->(v\[Mu]/.mostpars)*mosquitoPopulation[country]*(1-seasonalityAmplitude*Sin[seasonalityPhase-2*\[Pi]*t])/.mostpars)
 }]];
 
 
