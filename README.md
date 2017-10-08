@@ -51,6 +51,9 @@ For each of 34 countries, the transmission rates corresponding to attack rates r
 "CalibrationAllCountries.nb". Relevant intermediary data and source code are in the directory "Data/AttackRateCalibration".
 The file "nonsexualTransmissionRates.dat" contains the mapping of attack rate to transmission rate for all 34 countries.
 
+## Projections
+### Figure 1 - Puerto Rico zika vaccine impact
+The data for Figure 1 is generated using the code in the section "Run time series of vaccination impact scenarios" of the file "GenerateZikaResults.nb". The data is stored in the file "/GeneratedResults/VaccineImpactTimeSeries/vaccineTimeSeriesScenarios.dat". Figure 1 is plotted in the section "Figure 1 - Plot time series" of the file "PlotResults.nb"
+
 ## Uncertainty analysis
 
-## Projections
