@@ -362,4 +362,48 @@ Put[targetMenLow[country,attR,lag],
 
 
 
+priorDistribution=Get["priorDistribution.dat"];
 
+
+Clear@runBasicComparison
+runBasicComparison[country_,attackRate_,basemodel_,vrate_,veff_,mvacc_,vlow_,vhigh_,overridePars_:{},maleAgeRange_:{},femaleAgeRange_:{},endyr_:10,priorR_:0,ageover_:0,lag_:0]:=
+With[{
+betaHV=If[attackRate=="Best fit",(betaHV/.overridePars/.{betaHV->betaBestFit}),
+calibratedTransmissionRates[country][attackRate]],betaMF=0.1
+},
+quantifyImpact[
+basemodel,country,betaHV,betaMF,
+
+(*Vaccination scenario parameters*)
+{annualcovg->True,vaccrate->vrate,vacceff->veff,femalevacc->True,malevacc->mvacc,vaccagelow->vlow,vaccagehigh->vhigh,maleagerange->maleAgeRange,femaleagerange->femaleAgeRange},
+Append[overridePars,seasonalityFunction[country]],
+0,endyr,priorR,ageover,lag
+]
+]
+
+
+Clear@returnUncertaintyAnalysis
+returnUncertaintyAnalysis[override_:{},attRset_:{"Best fit"},countryID_:Position[CountryNames,"Puerto Rico"][[1,1]]]:=
+With[{country=CountryNames[[If[ClusterRun,ToExpression[$CommandLine[[3]]],countryID]]]},
+With[{basemodel=Get["basemodel"<>country<>".dat"]},
+Association[Table[attR->
+Association[Table[If[mvacc,"VaccinateMenAndWomen","VaccinateWomen"]->
+Association[Table[vrate->
+With[{sol=runBasicComparison[country,attR,basemodel,vrate,0.75,mvacc,9,49,override,{},{},10,0,0,0]},
+Association[{"PopulationVaccines"->pullAllVaccines[sol,AgeClasses,True],
+"MaleVaccines"->pullMaleVaccines[sol,AgeClasses,True],
+"FemaleVaccines"->pullFemaleVaccines[sol,AgeClasses,True],
+"FemaleVaccinesAgeGroup"->Association[Table[ToString[agegroup]->pullFemaleVaccines[sol,agegroup,True],{agegroup,Join[{Range[9,14]},Partition[Range[15,49],5]]}]],
+"AllPrenatalInfections"->pullPrenatalInfections[sol,country,AgeClasses,True],
+"PrenatalInfectionsAgeGroup"->Association[Table[ToString[agegroup]->pullPrenatalInfections[sol,country,agegroup,True],{agegroup,Join[{Range[9,14]},Partition[Range[15,49],5]]}]],
+"AllPregnancies"->pullPregnancies[sol,country,AgeClasses,True],
+"PregnanciesAgeGroup"->Association[Table[ToString[agegroup]->pullPregnancies[sol,country,agegroup,True],{agegroup,Join[{Range[9,14]},Partition[Range[15,49],5]]}]]}]],
+{vrate,Range[0,0.95,0.05]}]],
+{mvacc,{False,True}}]],
+{attR,attRset}]]]]
+
+
+If[ClusterRun,
+With[{MCMCi=ToExpression[$CommandLine[[2]]],country=CountryNames[[ToExpression[$CommandLine[[3]]]]]},
+Put[returnUncertaintyAnalysis[priorDistribution[[MCMCi]],If[country=="Puerto Rico",{"Best fit"},{0.25}]],"uncertaintyScenarios_"<>country<>"_"<>ToString[MCMCi]<>".dat"]]
+]
