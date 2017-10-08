@@ -506,6 +506,28 @@ mostpars,
 }]];
 
 
+samplePositive[dist_]:=Module[{x=-1},
+(
+While[x<0,x=Random[dist]];
+x
+)]
+
+
+Clear[SampledParameters]
+UnitScaling=365;
+Clear@SampledParameters
+SampledParameters:={
+(*Literature-confirmed*)
+\[Gamma]->UnitScaling/samplePositive[NormalDistribution[5.5,0.77]],
+v\[Delta]->UnitScaling/samplePositive[NormalDistribution[11,3.3]],
+\[Omega]->UnitScaling/Random[UniformDistribution[36*{1/2,5}]](*Duration of sexual infectiousness - assume 36 days - Turmel et al. Lancet 2016 *),
+\[Delta]->UnitScaling/Random[GammaDistribution[16.9625,1/2.875]](*Chan and Johannson*)(*E\[Rule]I*),
+
+(*Estimated from Puerto Rico calibration*)
+betaHV->samplePositive[NormalDistribution[0.259,0.00204]]
+}
+
+
 startyr=2015;
 endyr=2080;
 
