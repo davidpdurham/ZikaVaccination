@@ -55,5 +55,11 @@ The file "nonsexualTransmissionRates.dat" contains the mapping of attack rate to
 ### Figure 1 - Puerto Rico zika vaccine impact
 The data for Figure 1 is generated using the code in the section "Run time series of vaccination impact scenarios" of the file "GenerateZikaResults.nb". The data is stored in the file "/GeneratedResults/VaccineImpactTimeSeries/vaccineTimeSeriesScenarios.dat". Figure 1 is plotted in the section "Figure 1 - Plot time series" of the file "PlotResults.nb"
 
+### Figure 3 - Prior resistance
+Data for the figures plotting vaccine impact under pre-existing immunity (Figure 3) are generated in the section "Run prior immunity / coverage contour scenarios" of "GenerateZikaResults.nb". These code are run on the HPC, following the specific code blocks generated in the package "GenerateZikaResults.m".
+
+### Figure 4-6 - Age-specific vaccination
+Data for Figures 4-6, which plot age-specific vaccination strategies, are generated in the section "Run age-specific scenarios" of the file "GenerateZikaResults.nb". These code are run on the HPC, following the specific code blocks generated in the package "GenerateZikaResults.m".
+
 ## Uncertainty analysis
 
