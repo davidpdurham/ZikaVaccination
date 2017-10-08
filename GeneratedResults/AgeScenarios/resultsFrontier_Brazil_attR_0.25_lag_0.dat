@@ -1,0 +1,448 @@
+{<|"LowAge" -> 0, "HighAge" -> 4, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 6.624900045*^6, "prenatalInfections" -> 
+     535839.076868484, "pregnancies" -> 3.0976477547367746*^6, 
+    "population" -> 2.2001916398534313*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 9, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.342170009*^7, "prenatalInfections" -> 
+     462568.12888159126, "pregnancies" -> 3.0976477547367834*^6, 
+    "population" -> 2.2001916398576966*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 14, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.1112200134999998*^7, 
+    "prenatalInfections" -> 373981.8499616198, "pregnancies" -> 
+     3.0976477547367695*^6, "population" -> 2.2001916398526102*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 19, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.883510018*^7, "prenatalInfections" -> 
+     263248.8736863544, "pregnancies" -> 3.09764775473677*^6, 
+    "population" -> 2.2001916398523617*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 24, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 3.6236700224999994*^7, 
+    "prenatalInfections" -> 163939.72660224527, 
+    "pregnancies" -> 3.0976477547367755*^6, "population" -> 
+     2.2001916398553318*^8|>|>, <|"LowAge" -> 0, "HighAge" -> 29, 
+  "MaleVaccination" -> False, "Results" -> 
+   <|"vaccines" -> 4.4014500269999996*^7, "prenatalInfections" -> 
+     95957.10327037927, "pregnancies" -> 3.097647754736807*^6, 
+    "population" -> 2.2001916398600787*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 34, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.2040700315*^7, "prenatalInfections" -> 
+     57978.94348335293, "pregnancies" -> 3.09764775473681*^6, 
+    "population" -> 2.2001916398562518*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 39, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.944590036*^7, "prenatalInfections" -> 
+     39327.38550204802, "pregnancies" -> 3.097647754736853*^6, 
+    "population" -> 2.2001916398630646*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 6.6037500404999994*^7, 
+    "prenatalInfections" -> 29994.028710741815, 
+    "pregnancies" -> 3.097647754736862*^6, "population" -> 
+     2.2001916398616993*^8|>|>, <|"LowAge" -> 0, "HighAge" -> 49, 
+  "MaleVaccination" -> False, "Results" -> 
+   <|"vaccines" -> 7.218630044999999*^7, "prenatalInfections" -> 
+     24198.17448493117, "pregnancies" -> 3.097647754736877*^6, 
+    "population" -> 2.2001916398593843*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 9, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 6.796800045*^6, "prenatalInfections" -> 
+     533806.2991756788, "pregnancies" -> 3.097647754736797*^6, 
+    "population" -> 2.2001916398558617*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 14, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.448730009*^7, "prenatalInfections" -> 
+     440409.4700665813, "pregnancies" -> 3.097647754736781*^6, 
+    "population" -> 2.2001916398560798*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 19, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.2210200134999998*^7, 
+    "prenatalInfections" -> 316981.9910723721, "pregnancies" -> 
+     3.097647754736796*^6, "population" -> 2.2001916398598748*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 24, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.961180018*^7, "prenatalInfections" -> 
+     201405.32757837226, "pregnancies" -> 3.0976477547367476*^6, 
+    "population" -> 2.2001916398505005*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 29, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 3.7389600224999994*^7, 
+    "prenatalInfections" -> 119783.65737437618, 
+    "pregnancies" -> 3.0976477547367713*^6, "population" -> 
+     2.200191639855507*^8|>|>, <|"LowAge" -> 5, "HighAge" -> 34, 
+  "MaleVaccination" -> False, "Results" -> 
+   <|"vaccines" -> 4.5415800269999996*^7, "prenatalInfections" -> 
+     73005.17505535475, "pregnancies" -> 3.09764775473681*^6, 
+    "population" -> 2.2001916398606706*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 39, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.2821000315*^7, "prenatalInfections" -> 
+     49573.25126744322, "pregnancies" -> 3.0976477547368137*^6, 
+    "population" -> 2.2001916398604876*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.941260036*^7, "prenatalInfections" -> 
+     37688.201922542255, "pregnancies" -> 3.0976477547368533*^6, 
+    "population" -> 2.2001916398630545*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 6.5561400404999994*^7, 
+    "prenatalInfections" -> 30241.69206789986, "pregnancies" -> 
+     3.097647754736879*^6, "population" -> 2.2001916398656374*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 14, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 7.690500045*^6, "prenatalInfections" -> 
+     511813.1925840584, "pregnancies" -> 3.097647754736769*^6, 
+    "population" -> 2.2001916398564804*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 19, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.541340009*^7, "prenatalInfections" -> 
+     376457.71257995797, "pregnancies" -> 3.097647754736775*^6, 
+    "population" -> 2.2001916398569262*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 24, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.2815000134999998*^7, 
+    "prenatalInfections" -> 244551.4041983789, "pregnancies" -> 
+     3.097647754736768*^6, "population" -> 2.2001916398526165*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 29, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 3.059280018*^7, "prenatalInfections" -> 
+     148511.0582935101, "pregnancies" -> 3.097647754736771*^6, 
+    "population" -> 2.2001916398527917*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 34, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 3.8619000224999994*^7, 
+    "prenatalInfections" -> 91904.09818766252, "pregnancies" -> 
+     3.0976477547367853*^6, "population" -> 2.2001916398582727*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 39, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 4.6024200269999996*^7, 
+    "prenatalInfections" -> 62829.99219918498, "pregnancies" -> 
+     3.09764775473681*^6, "population" -> 2.200191639860202*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.2615800315*^7, "prenatalInfections" -> 
+     47800.84124289768, "pregnancies" -> 3.097647754736812*^6, 
+    "population" -> 2.2001916398604065*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.876460036*^7, "prenatalInfections" -> 
+     38251.73625618318, "pregnancies" -> 3.0976477547368305*^6, 
+    "population" -> 2.2001916398613286*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 19, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 7.722900045*^6, "prenatalInfections" -> 
+     459632.91096982406, "pregnancies" -> 3.097647754736798*^6, 
+    "population" -> 2.2001916398570797*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 24, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.512450009*^7, "prenatalInfections" -> 
+     308283.35017857887, "pregnancies" -> 3.097647754736754*^6, 
+    "population" -> 2.2001916398550433*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 29, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.2902300134999998*^7, 
+    "prenatalInfections" -> 194347.71863074752, 
+    "pregnancies" -> 3.097647754736791*^6, "population" -> 
+     2.200191639852611*^8|>|>, <|"LowAge" -> 15, "HighAge" -> 34, 
+  "MaleVaccination" -> False, "Results" -> <|"vaccines" -> 3.092850018*^7, 
+    "prenatalInfections" -> 124540.91527708902, 
+    "pregnancies" -> 3.097647754736769*^6, "population" -> 
+     2.2001916398527977*^8|>|>, <|"LowAge" -> 15, "HighAge" -> 39, 
+  "MaleVaccination" -> False, "Results" -> 
+   <|"vaccines" -> 3.8333700224999994*^7, "prenatalInfections" -> 
+     87046.73228233072, "pregnancies" -> 3.0976477547367853*^6, 
+    "population" -> 2.2001916398574728*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 4.4925300269999996*^7, 
+    "prenatalInfections" -> 66798.88719885383, "pregnancies" -> 
+     3.0976477547368114*^6, "population" -> 2.200191639858376*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 5.1074100315*^7, "prenatalInfections" -> 
+     53491.240987657955, "pregnancies" -> 3.0976477547368477*^6, 
+    "population" -> 2.2001916398588005*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 24, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 7.401600045*^6, "prenatalInfections" -> 
+     431007.1172492144, "pregnancies" -> 3.0976477547367713*^6, 
+    "population" -> 2.200191639854651*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 29, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.517940009*^7, "prenatalInfections" -> 
+     291507.5703843022, "pregnancies" -> 3.0976477547367793*^6, 
+    "population" -> 2.200191639856887*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 34, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.3205600134999998*^7, 
+    "prenatalInfections" -> 200671.95232457685, 
+    "pregnancies" -> 3.097647754736768*^6, "population" -> 
+     2.2001916398497188*^8|>|>, <|"LowAge" -> 20, "HighAge" -> 39, 
+  "MaleVaccination" -> False, "Results" -> <|"vaccines" -> 3.061080018*^7, 
+    "prenatalInfections" -> 147647.57101912703, 
+    "pregnancies" -> 3.0976477547367713*^6, "population" -> 
+     2.2001916398512828*^8|>|>, <|"LowAge" -> 20, "HighAge" -> 44, 
+  "MaleVaccination" -> False, "Results" -> 
+   <|"vaccines" -> 3.7202400224999994*^7, "prenatalInfections" -> 
+     116181.06263835849, "pregnancies" -> 3.0976477547367597*^6, 
+    "population" -> 2.2001916398553592*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 4.3351200269999996*^7, 
+    "prenatalInfections" -> 93943.2493062967, "pregnancies" -> 
+     3.097647754737896*^6, "population" -> 2.20019163994696*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 29, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 7.777800045*^6, "prenatalInfections" -> 
+     439633.1701584462, "pregnancies" -> 3.0976477547368*^6, 
+    "population" -> 2.200191639859196*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 34, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.580400009*^7, "prenatalInfections" -> 
+     322921.59544823866, "pregnancies" -> 3.0976477547367737*^6, 
+    "population" -> 2.2001916398568365*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 39, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.3209200134999998*^7, 
+    "prenatalInfections" -> 249506.8604934266, "pregnancies" -> 
+     3.0976477547367476*^6, "population" -> 2.2001916398463798*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.980080018*^7, "prenatalInfections" -> 
+     202087.16412680893, "pregnancies" -> 3.097647754736767*^6, 
+    "population" -> 2.200191639848356*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 3.5949600224999994*^7, 
+    "prenatalInfections" -> 166195.3453695073, "pregnancies" -> 
+     3.0976477547367755*^6, "population" -> 2.2001916398572457*^8|>|>, 
+ <|"LowAge" -> 30, "HighAge" -> 34, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 8.026200045*^6, "prenatalInfections" -> 
+     467714.11786306323, "pregnancies" -> 3.097647754736795*^6, 
+    "population" -> 2.2001916398491076*^8|>|>, 
+ <|"LowAge" -> 30, "HighAge" -> 39, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.543140009*^7, "prenatalInfections" -> 
+     374882.672055357, "pregnancies" -> 3.097647754736755*^6, 
+    "population" -> 2.2001916398549703*^8|>|>, 
+ <|"LowAge" -> 30, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.2023000134999998*^7, 
+    "prenatalInfections" -> 311941.66782608035, 
+    "pregnancies" -> 3.0976477547367495*^6, "population" -> 
+     2.2001916398476532*^8|>|>, <|"LowAge" -> 30, "HighAge" -> 49, 
+  "MaleVaccination" -> False, "Results" -> <|"vaccines" -> 2.817180018*^7, 
+    "prenatalInfections" -> 261972.4762629007, "pregnancies" -> 
+     3.0976477547367457*^6, "population" -> 2.2001916398458362*^8|>|>, 
+ <|"LowAge" -> 35, "HighAge" -> 39, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 7.405200045*^6, "prenatalInfections" -> 
+     501468.861780567, "pregnancies" -> 3.097647754736772*^6, 
+    "population" -> 2.2001916398546487*^8|>|>, 
+ <|"LowAge" -> 35, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.399680009*^7, "prenatalInfections" -> 
+     427122.1991051223, "pregnancies" -> 3.0976477547367536*^6, 
+    "population" -> 2.2001916398550898*^8|>|>, 
+ <|"LowAge" -> 35, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 2.0145600134999998*^7, 
+    "prenatalInfections" -> 366590.3720546726, "pregnancies" -> 
+     3.09764775473677*^6, "population" -> 2.2001916398525995*^8|>|>, 
+ <|"LowAge" -> 40, "HighAge" -> 44, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 6.591600045*^6, "prenatalInfections" -> 
+     527953.7998659548, "pregnancies" -> 3.0976477547367746*^6, 
+    "population" -> 2.2001916398534477*^8|>|>, 
+ <|"LowAge" -> 40, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 1.274040009*^7, "prenatalInfections" -> 
+     461317.6147494194, "pregnancies" -> 3.0976477547367793*^6, 
+    "population" -> 2.2001916398562777*^8|>|>, 
+ <|"LowAge" -> 45, "HighAge" -> 49, "MaleVaccination" -> False, 
+  "Results" -> <|"vaccines" -> 6.148800045*^6, "prenatalInfections" -> 
+     539514.7527569742, "pregnancies" -> 3.0976477547367755*^6, 
+    "population" -> 2.2001916398539954*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 4, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.352880009*^7, "prenatalInfections" -> 
+     461590.5633335409, "pregnancies" -> 3.097647754736755*^6, 
+    "population" -> 2.2001916398550218*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 9, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 2.739510018*^7, "prenatalInfections" -> 
+     322756.13327994087, "pregnancies" -> 3.0976477547367453*^6, 
+    "population" -> 2.2001916398459977*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 14, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.3074900269999996*^7, 
+    "prenatalInfections" -> 191436.00649091398, 
+    "pregnancies" -> 3.0976477547367965*^6, "population" -> 
+     2.2001916398537657*^8|>|>, <|"LowAge" -> 0, "HighAge" -> 19, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 5.879250036*^7, 
+    "prenatalInfections" -> 95886.91370892839, "pregnancies" -> 
+     3.097647754736851*^6, "population" -> 2.2001916398616958*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 24, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 7.379460044999999*^7, 
+    "prenatalInfections" -> 44305.28686911059, "pregnancies" -> 
+     3.0976477547368957*^6, "population" -> 2.200191639867088*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 29, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 8.945460053999999*^7, 
+    "prenatalInfections" -> 20355.119437243215, 
+    "pregnancies" -> 3.097647754736927*^6, "population" -> 
+     2.2001916398693675*^8|>|>, <|"LowAge" -> 0, "HighAge" -> 34, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 1.0548810063*^8, 
+    "prenatalInfections" -> 10669.239766678113, 
+    "pregnancies" -> 3.0976477547369394*^6, "population" -> 
+     2.2001916398704594*^8|>|>, <|"LowAge" -> 0, "HighAge" -> 39, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 1.2014730072*^8, 
+    "prenatalInfections" -> 7027.779283387071, "pregnancies" -> 
+     3.0976477547369683*^6, "population" -> 2.2001916398725897*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 44, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.3303530081*^8, "prenatalInfections" -> 
+     5551.036069233936, "pregnancies" -> 3.097647754736987*^6, 
+    "population" -> 2.2001916398737815*^8|>|>, 
+ <|"LowAge" -> 0, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.4490900089999998*^8, 
+    "prenatalInfections" -> 4802.403169680354, "pregnancies" -> 
+     3.097647754736986*^6, "population" -> 2.2001916398740172*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 9, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.386630009*^7, "prenatalInfections" -> 
+     457717.64876771875, "pregnancies" -> 3.0976477547367555*^6, 
+    "population" -> 2.2001916398520085*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 14, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 2.954610018*^7, "prenatalInfections" -> 
+     295274.71108135686, "pregnancies" -> 3.0976477547367653*^6, 
+    "population" -> 2.200191639851148*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 19, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.5263700269999996*^7, 
+    "prenatalInfections" -> 154543.50698834253, 
+    "pregnancies" -> 3.0976477547368077*^6, "population" -> 
+     2.200191639854598*^8|>|>, <|"LowAge" -> 5, "HighAge" -> 24, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 6.026580036*^7, 
+    "prenatalInfections" -> 71190.90082548995, "pregnancies" -> 
+     3.097647754736852*^6, "population" -> 2.200191639861316*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 29, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 7.592580044999999*^7, 
+    "prenatalInfections" -> 31462.67180143062, "pregnancies" -> 
+     3.0976477547368845*^6, "population" -> 2.2001916398557496*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 34, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 9.195930053999999*^7, 
+    "prenatalInfections" -> 15362.371690123331, 
+    "pregnancies" -> 3.09764775473693*^6, "population" -> 
+     2.2001916398691103*^8|>|>, <|"LowAge" -> 5, "HighAge" -> 39, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 1.0661850063*^8, 
+    "prenatalInfections" -> 9334.577928480336, "pregnancies" -> 
+     3.0976477547369427*^6, "population" -> 2.2001916398639482*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 44, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.1950650072*^8, "prenatalInfections" -> 
+     6889.0575476459435, "pregnancies" -> 3.097647754736968*^6, 
+    "population" -> 2.2001916398724657*^8|>|>, 
+ <|"LowAge" -> 5, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.3138020081*^8, "prenatalInfections" -> 
+     5650.306000315575, "pregnancies" -> 3.097647754736986*^6, 
+    "population" -> 2.2001916398737824*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 14, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.567980009*^7, "prenatalInfections" -> 
+     427992.70033551566, "pregnancies" -> 3.097647754736797*^6, 
+    "population" -> 2.200191639859146*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 19, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 3.139740018*^7, "prenatalInfections" -> 
+     243311.5997465103, "pregnancies" -> 3.09764775473677*^6, 
+    "population" -> 2.2001916398571914*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 24, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.6399500269999996*^7, 
+    "prenatalInfections" -> 116185.7116948978, "pregnancies" -> 
+     3.0976477547368193*^6, "population" -> 2.2001916398608732*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 29, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 6.205950036*^7, "prenatalInfections" -> 
+     50758.08885276368, "pregnancies" -> 3.097647754736865*^6, 
+    "population" -> 2.200191639864371*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 34, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 7.809300044999999*^7, 
+    "prenatalInfections" -> 23586.245581289175, 
+    "pregnancies" -> 3.09764775473689*^6, "population" -> 
+     2.200191639866466*^8|>|>, <|"LowAge" -> 10, "HighAge" -> 39, 
+  "MaleVaccination" -> True, "Results" -> 
+   <|"vaccines" -> 9.275220053999999*^7, "prenatalInfections" -> 
+     13375.02627586407, "pregnancies" -> 3.097647754736934*^6, 
+    "population" -> 2.2001916398672453*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 44, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.0564020063*^8, "prenatalInfections" -> 
+     9219.231420739114, "pregnancies" -> 3.0976477547369404*^6, 
+    "population" -> 2.2001916398704618*^8|>|>, 
+ <|"LowAge" -> 10, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.1751390072*^8, "prenatalInfections" -> 
+     7110.45680369361, "pregnancies" -> 3.0976477547369646*^6, 
+    "population" -> 2.2001916398720348*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 19, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.571760009*^7, "prenatalInfections" -> 
+     383770.56068042, "pregnancies" -> 3.0976477547367765*^6, 
+    "population" -> 2.2001916398568898*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 24, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 3.071970018*^7, "prenatalInfections" -> 
+     201484.26421086869, "pregnancies" -> 3.097647754736769*^6, 
+    "population" -> 2.200191639852728*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 29, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.6379700269999996*^7, 
+    "prenatalInfections" -> 92245.75148521241, "pregnancies" -> 
+     3.0976477547367923*^6, "population" -> 2.2001916398585045*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 34, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 6.241320036*^7, "prenatalInfections" -> 
+     42317.20275769419, "pregnancies" -> 3.0976477547368864*^6, 
+    "population" -> 2.2001916398664132*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 39, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 7.707240044999999*^7, 
+    "prenatalInfections" -> 22809.127151246106, 
+    "pregnancies" -> 3.0976477547369003*^6, "population" -> 
+     2.2001916398579806*^8|>|>, <|"LowAge" -> 15, "HighAge" -> 44, 
+  "MaleVaccination" -> True, "Results" -> 
+   <|"vaccines" -> 8.996040053999999*^7, "prenatalInfections" -> 
+     14718.100777749347, "pregnancies" -> 3.097647754736928*^6, 
+    "population" -> 2.2001916398695716*^8|>|>, 
+ <|"LowAge" -> 15, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.0183410063*^8, "prenatalInfections" -> 
+     10573.126922414864, "pregnancies" -> 3.0976477547369376*^6, 
+    "population" -> 2.2001916398701584*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 24, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.500210009*^7, "prenatalInfections" -> 
+     363526.0434132799, "pregnancies" -> 3.097647754736776*^6, 
+    "population" -> 2.2001916398552406*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 29, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 3.066210018*^7, "prenatalInfections" -> 
+     191082.9554393111, "pregnancies" -> 3.0976477547367513*^6, 
+    "population" -> 2.2001916398504588*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 34, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.6695600269999996*^7, 
+    "prenatalInfections" -> 94919.2426317702, "pregnancies" -> 
+     3.0976477547368174*^6, "population" -> 2.2001916398609427*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 39, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 6.135480036*^7, "prenatalInfections" -> 
+     51386.750512308194, "pregnancies" -> 3.097647754736861*^6, 
+    "population" -> 2.2001916398640177*^8|>|>, 
+ <|"LowAge" -> 20, "HighAge" -> 44, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 7.424280044999999*^7, 
+    "prenatalInfections" -> 31829.967982132603, 
+    "pregnancies" -> 3.0976477547368985*^6, "population" -> 
+     2.2001916398655117*^8|>|>, <|"LowAge" -> 20, "HighAge" -> 49, 
+  "MaleVaccination" -> True, "Results" -> 
+   <|"vaccines" -> 8.611650053999999*^7, "prenatalInfections" -> 
+     21466.450165825707, "pregnancies" -> 3.0976477547369287*^6, 
+    "population" -> 2.2001916398690665*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 29, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.566000009*^7, "prenatalInfections" -> 
+     368064.50830173696, "pregnancies" -> 3.097647754736756*^6, 
+    "population" -> 2.2001916398547935*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 34, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 3.169350018*^7, "prenatalInfections" -> 
+     208424.6851561516, "pregnancies" -> 3.0976477547367504*^6, 
+    "population" -> 2.2001916398505938*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 39, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.6352700269999996*^7, 
+    "prenatalInfections" -> 119643.71491619475, 
+    "pregnancies" -> 3.0976477547367914*^6, "population" -> 
+     2.200191639858373*^8|>|>, <|"LowAge" -> 25, "HighAge" -> 44, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 5.924070036*^7, 
+    "prenatalInfections" -> 73963.54913960754, "pregnancies" -> 
+     3.0976477547368566*^6, "population" -> 2.200191639861069*^8|>|>, 
+ <|"LowAge" -> 25, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 7.111440044999999*^7, 
+    "prenatalInfections" -> 48362.283642531394, 
+    "pregnancies" -> 3.097647754736915*^6, "population" -> 
+     2.2001916398686266*^8|>|>, <|"LowAge" -> 30, "HighAge" -> 34, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 1.603350009*^7, 
+    "prenatalInfections" -> 390256.46084279346, 
+    "pregnancies" -> 3.097647754736751*^6, "population" -> 
+     2.200191639854924*^8|>|>, <|"LowAge" -> 30, "HighAge" -> 39, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 3.069270018*^7, 
+    "prenatalInfections" -> 247650.2099012296, "pregnancies" -> 
+     3.097647754736798*^6, "population" -> 2.2001916398518938*^8|>|>, 
+ <|"LowAge" -> 30, "HighAge" -> 44, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 4.3580700269999996*^7, 
+    "prenatalInfections" -> 159920.03269915708, 
+    "pregnancies" -> 3.0976477547378875*^6, "population" -> 
+     2.2001916399470258*^8|>|>, <|"LowAge" -> 30, "HighAge" -> 49, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 5.545440036*^7, 
+    "prenatalInfections" -> 104867.11710514485, 
+    "pregnancies" -> 3.0976477547368375*^6, "population" -> 
+     2.2001916398625064*^8|>|>, <|"LowAge" -> 35, "HighAge" -> 39, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 1.465920009*^7, 
+    "prenatalInfections" -> 426991.1204316992, "pregnancies" -> 
+     3.097647754736781*^6, "population" -> 2.2001916398569086*^8|>|>, 
+ <|"LowAge" -> 35, "HighAge" -> 44, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 2.754720018*^7, "prenatalInfections" -> 
+     299903.0438721648, "pregnancies" -> 3.0976477547367555*^6, 
+    "population" -> 2.2001916398468846*^8|>|>, 
+ <|"LowAge" -> 35, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 3.9420900269999996*^7, 
+    "prenatalInfections" -> 206460.79935284873, 
+    "pregnancies" -> 3.097647754736783*^6, "population" -> 
+     2.2001916398574585*^8|>|>, <|"LowAge" -> 40, "HighAge" -> 44, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 1.288800009*^7, 
+    "prenatalInfections" -> 460754.28155872144, 
+    "pregnancies" -> 3.097647754736785*^6, "population" -> 
+     2.2001916398566836*^8|>|>, <|"LowAge" -> 40, "HighAge" -> 49, 
+  "MaleVaccination" -> True, "Results" -> <|"vaccines" -> 2.476170018*^7, 
+    "prenatalInfections" -> 340919.2155146441, "pregnancies" -> 
+     3.0976477547367434*^6, "population" -> 2.2001916398487744*^8|>|>, 
+ <|"LowAge" -> 45, "HighAge" -> 49, "MaleVaccination" -> True, 
+  "Results" -> <|"vaccines" -> 1.187370009*^7, "prenatalInfections" -> 
+     477565.75139420154, "pregnancies" -> 3.0976477547367886*^6, 
+    "population" -> 2.2001916398578426*^8|>|>}
