@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     45197,       1134]
-NotebookOptionsPosition[     40509,       1011]
-NotebookOutlinePosition[     40884,       1027]
-CellTagsIndexPosition[     40841,       1024]
+NotebookDataLength[     65349,       1619]
+NotebookOptionsPosition[     58169,       1436]
+NotebookOutlinePosition[     58544,       1452]
+CellTagsIndexPosition[     58501,       1449]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -119,38 +119,20 @@ ZikaVaccineModel\"\>"], "Output",
    3.7143221424205647`*^9, 3.7151093683797226`*^9, 3.71517787624046*^9, 
    3.715340941231011*^9, 3.716322296908173*^9, 3.716324209815663*^9, 
    3.7163244797486286`*^9, 3.716325013673271*^9, 3.71632516497968*^9, 
-   3.716325661717451*^9},ExpressionUUID->"e71ea001-7d60-4466-bb54-\
-49908802539d"]
+   3.716325661717451*^9, 3.7164708955584145`*^9, 
+   3.7164711242743635`*^9},ExpressionUUID->"2a6e7d32-6926-49c5-8d8b-\
+bc71377a277e"]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
   RowBox[{"calibratedTransmissionRates", "=", 
    RowBox[{"Get", "[", "\"\<nonsexualTransmissionRates.dat\>\"", "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"calibratedTransmissionRatesSexual", "=", 
-   RowBox[{"Get", "[", "\"\<sexualTransmissionRates.dat\>\"", "]"}]}], 
-  ";"}]}], "Code",
+  ";"}]], "Code",
  CellChangeTimes->{{3.7109600550736227`*^9, 3.7109600907297935`*^9}, {
-  3.7111212565395665`*^9, 
-  3.711121268473462*^9}},ExpressionUUID->"fe7e3218-656c-44f2-b3e6-\
-146f38f79bbf"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Get","noopen",
-   "\"Cannot open \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"sexualTransmissionRates.dat\\\\\\\"\\\"}]\\).\"",
-   2,6,1,26336703576468109151,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.716322297017539*^9, 3.7163242098625374`*^9, 
-  3.7163244797926598`*^9, 3.7163250137153*^9, 3.7163251650417237`*^9, 
-  3.716325661778496*^9},ExpressionUUID->"0f860526-4227-476d-9a6a-\
-b7e80f3ee180"]
-}, Open  ]]
+   3.7111212565395665`*^9, 3.711121268473462*^9}, 
+   3.716471122182578*^9},ExpressionUUID->"fe7e3218-656c-44f2-b3e6-\
+146f38f79bbf"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -753,15 +735,34 @@ Cell[BoxData[{
   RowBox[{"seasonalityAmplitude", "=", 
    RowBox[{"7", "/", "10"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"seasonalityPhase", "=", 
-   RowBox[{
-    RowBox[{"-", "3"}], "*", 
-    RowBox[{"Pi", "/", "10"}]}]}], ";"}]}], "Code",
+  RowBox[{
+   RowBox[{"seasonalityPhase", "=", 
+    RowBox[{
+     RowBox[{"-", "3"}], "*", 
+     RowBox[{"Pi", "/", "10"}]}]}], ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"seasonalityFunction", "[", "country_", "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{"MosqBirth", "\[Rule]", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"365", "/", "7.8"}], ")"}], "*", 
+     RowBox[{"mosquitoPopulation", "[", "country", "]"}], "*", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       RowBox[{
+        RowBox[{"7", "/", "10"}], "*", 
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"Pi", "/", "5"}], "-", 
+          RowBox[{"2", "*", "Pi", "*", "t"}]}], "]"}]}]}], ")"}]}]}], 
+   ")"}]}]}], "Code",
  CellChangeTimes->{{3.7151094608739386`*^9, 3.715109480558256*^9}, {
-   3.7163221716559677`*^9, 3.7163221770801682`*^9}, 
-   3.716322284407734*^9},ExpressionUUID->"79b1b928-7c53-40e7-ae86-\
+   3.7163221716559677`*^9, 3.7163221770801682`*^9}, 3.716322284407734*^9, {
+   3.716470866687172*^9, 3.7164708718638697`*^9}, {3.7164709365193996`*^9, 
+   3.7164709497859373`*^9}},ExpressionUUID->"79b1b928-7c53-40e7-ae86-\
 5bdad498ed5c"]
-}, Open  ]]
+}, Closed]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -1004,9 +1005,433 @@ Cell[BoxData[
  CellChangeTimes->{{3.7114757634413614`*^9, 
   3.711475767499926*^9}},ExpressionUUID->"5d17dcef-39da-4514-830c-\
 c8b0c38640c3"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Run prior immunity / coverage contour scenarios", "Section",
+ CellChangeTimes->{{3.7117331308761435`*^9, 
+  3.7117331495179887`*^9}},ExpressionUUID->"733c7398-fc64-47d0-82bf-\
+e6a698341f34"],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{"(*", " ", 
+   RowBox[{"PRIOR", " ", "COVERAGE", " ", "SCENARIO"}], " ", "*)"}], 
+  "\n"}]], "Code",
+ CellChangeTimes->{{3.711733152267993*^9, 
+  3.711733159580187*^9}},ExpressionUUID->"bb7ad88e-2388-4784-92c2-\
+5bf3b84ab011"],
+
+Cell[CellGroupData[{
+
+Cell["Setup code", "Subsubsection",
+ CellChangeTimes->{{3.7112192748980975`*^9, 3.7112192766403723`*^9}, {
+  3.711226002598155*^9, 
+  3.7112260030327415`*^9}},ExpressionUUID->"4c4f8b6e-48ac-4355-b9af-\
+5a5276a7a523"],
+
+Cell["\<\
+Assumptions / specifications for the \[OpenCurlyDoubleQuote]cases averted per \
+vaccine\[CloseCurlyDoubleQuote] analysis:
+1) Use a small vaccination rate of 0.01 to minimize nonlinear impact
+2) Disable annual coverage, so only consider one-time mass vaccination\
+\>", "Text",
+ CellChangeTimes->{{3.711297748134208*^9, 
+  3.711297804621227*^9}},ExpressionUUID->"5728e919-a7d3-4720-bb0a-\
+e755462c4783"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "@", "runFrontierScenarios"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"runFrontierScenarios", "[", 
+   RowBox[{
+   "country_", ",", "attackRate_", ",", "basemodel_", ",", "vrate_", ",", 
+    "veff_", ",", "mvacc_", ",", "vlow_", ",", "vhigh_", ",", 
+    RowBox[{"maleAgeRange_:", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"femaleAgeRange_:", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"endyr_:", "10"}], ",", 
+    RowBox[{"priorR_:", "0"}], ",", 
+    RowBox[{"ageover_:", "0"}], ",", 
+    RowBox[{"lag_:", "0"}]}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"betaHV", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"attackRate", "\[Equal]", "\"\<Best fit\>\""}], ",", 
+         "betaBestFit", ",", 
+         RowBox[{
+          RowBox[{"calibratedTransmissionRates", "[", "country", "]"}], "[", 
+          "attackRate", "]"}]}], "]"}]}], ",", 
+      RowBox[{"betaMF", "=", "0.1"}]}], "\[IndentingNewLine]", "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"quantifyImpact", "[", "\[IndentingNewLine]", 
+     RowBox[{
+     "basemodel", ",", "country", ",", "betaHV", ",", "betaMF", ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Vaccination", " ", "scenario", " ", "parameters"}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"annualcovg", "\[Rule]", "False"}], ",", 
+        RowBox[{"vaccrate", "\[Rule]", "vrate"}], ",", 
+        RowBox[{"vacceff", "\[Rule]", "veff"}], ",", 
+        RowBox[{"femalevacc", "\[Rule]", "True"}], ",", 
+        RowBox[{"malevacc", "\[Rule]", "mvacc"}], ",", 
+        RowBox[{"vaccagelow", "\[Rule]", "vlow"}], ",", 
+        RowBox[{"vaccagehigh", "\[Rule]", "vhigh"}], ",", 
+        RowBox[{"maleagerange", "\[Rule]", "maleAgeRange"}], ",", 
+        RowBox[{"femaleagerange", "\[Rule]", "femaleAgeRange"}]}], "}"}], ",",
+       "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"seasonalityFunction", "[", "country", "]"}], "}"}], ",", 
+      "\[IndentingNewLine]", "0", ",", "endyr", ",", "priorR", ",", "ageover",
+       ",", "lag"}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Code",
+ CellChangeTimes->{{3.7112193528034077`*^9, 3.7112193742970552`*^9}, {
+  3.7112194261807623`*^9, 3.7112194498964*^9}, {3.711219484971417*^9, 
+  3.711219562406809*^9}, {3.7112196837383394`*^9, 3.71121971679076*^9}, {
+  3.7112204039790034`*^9, 3.711220455325137*^9}, {3.711220517738079*^9, 
+  3.7112205196906853`*^9}, {3.7112206371423955`*^9, 3.7112206686070986`*^9}, {
+  3.7112207024726315`*^9, 3.7112207177257037`*^9}, {3.7112208822246675`*^9, 
+  3.71122088313743*^9}, {3.7112977448524513`*^9, 3.71129774521634*^9}, {
+  3.7112978098442154`*^9, 3.7112978676094847`*^9}, {3.711297924918034*^9, 
+  3.7112979297730284`*^9}, {3.7113064883163433`*^9, 3.711306580334937*^9}, {
+  3.7113080189791613`*^9, 3.711308057092841*^9}, {3.7151099164704742`*^9, 
+  3.715109922973793*^9}, {3.7164709874416428`*^9, 3.7164710427067704`*^9}, {
+  3.7164712148029404`*^9, 
+  3.7164712298072805`*^9}},ExpressionUUID->"d2e34ddf-b315-4ae2-a692-\
+0339ac333f4f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Setup age group targeting", "Subsubsection",
+ CellChangeTimes->{{3.7112968895988717`*^9, 3.711296892053542*^9}, 
+   3.711308485301056*^9},ExpressionUUID->"9ff422d3-491a-4953-af5f-\
+bdd52602e97d"],
+
+Cell["\<\
+Compute age group targeting for Puerto Rico, under the \[OpenCurlyQuote]best \
+fit\[CloseCurlyQuote] attack rate, 90% coverage with 75% efficacy vaccine\
+\>", "Text",
+ CellChangeTimes->{{3.7112848777531595`*^9, 
+  3.711284900497135*^9}},ExpressionUUID->"da7bd87a-485f-43c6-80da-\
+6cee04ec28f5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7112961049492188`*^9, 
+  3.711296108474163*^9}},ExpressionUUID->"7485d6b1-9318-4616-9348-\
+54d5a8d81240"],
+
+Cell[BoxData["\<\"D:\\\\Dropbox\\\\Projects\\\\Zika vaccine\\\\Code\"\>"], \
+"Output",
+ CellChangeTimes->{3.711298126338483*^9, 3.7113040119719906`*^9, 
+  3.711461944048524*^9, 3.7117342427780037`*^9, 
+  3.7117404567127047`*^9},ExpressionUUID->"f15e0176-ef24-4021-b245-\
+32bc6ba34312"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "@", "vaccResultsPriorImmunity"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"vaccResultsPriorImmunity", "[", 
+    RowBox[{"country_", ",", "priorR_"}], "]"}], ":=", "\[IndentingNewLine]", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"veff", "=", "0.75"}], ",", 
+       RowBox[{"mvacc", "=", "False"}], ",", 
+       RowBox[{"vlow", "=", "9"}], ",", 
+       RowBox[{"vhigh", "=", "49"}], ",", 
+       RowBox[{"endyr", "=", "5"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"basemodel", "=", 
+         RowBox[{"Get", "[", 
+          RowBox[{
+          "\"\<basemodel\>\"", "<>", "country", "<>", "\"\<.dat\>\""}], 
+          "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Flatten", "[", "\n", 
+        RowBox[{
+         RowBox[{"Table", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Association", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<attR\>\"", "\[Rule]", "attR"}], ",", 
+              RowBox[{"\"\<vrate\>\"", "\[Rule]", "vrate"}], ",", 
+              RowBox[{"\"\<priorR\>\"", "->", "priorR"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"\"\<Results\>\"", "\[Rule]", "\[IndentingNewLine]", 
+               RowBox[{"With", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"data", "=", 
+                   RowBox[{"runFrontierScenarios", "[", 
+                    RowBox[{
+                    "country", ",", "attR", ",", "basemodel", ",", "vrate", 
+                    ",", "veff", ",", "mvacc", ",", "vlow", ",", "vhigh", ",", 
+                    RowBox[{"{", "}"}], ",", 
+                    RowBox[{"{", "}"}], ",", "endyr", ",", "priorR"}], 
+                    "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"Association", "[", 
+                  RowBox[{"{", "\[IndentingNewLine]", 
+                   RowBox[{
+                    RowBox[{"\"\<vaccines\>\"", "\[Rule]", 
+                    RowBox[{"pullAllVaccines", "[", 
+                    RowBox[{"data", ",", "AgeClasses", ",", "True"}], "]"}]}],
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"\"\<prenatalInfections\>\"", "\[Rule]", 
+                    RowBox[{"pullPrenatalInfections", "[", 
+                    RowBox[{
+                    "data", ",", "country", ",", "AgeClasses", ",", "True"}], 
+                    "]"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"\"\<pregnancies\>\"", "\[Rule]", 
+                    RowBox[{"pullPregnancies", "[", 
+                    RowBox[{
+                    "data", ",", "country", ",", "AgeClasses", ",", "True"}], 
+                    "]"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"\"\<population\>\"", "\[Rule]", 
+                    RowBox[{"pullAllPopulation", "[", 
+                    RowBox[{"data", ",", "AgeClasses", ",", "True"}], 
+                    "]"}]}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+                "\[IndentingNewLine]", "]"}]}]}], "\n", "}"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"attR", ",", 
+             RowBox[{"Range", "[", 
+              RowBox[{"0.05", ",", "0.55", ",", "0.05"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"vrate", ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0.5", ",", "0.9"}], "}"}]}], "}"}]}], "]"}], 
+         ",", "1"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]}], "Code",
+ CellChangeTimes->{{3.711219521342289*^9, 3.7112195798893557`*^9}, {
+   3.7112204911736784`*^9, 3.711220510854018*^9}, {3.7112205648339515`*^9, 
+   3.7112205732561655`*^9}, {3.7112207275745983`*^9, 3.711220761200269*^9}, {
+   3.7112211038562737`*^9, 3.711221126125988*^9}, {3.711221157796819*^9, 
+   3.7112213529884443`*^9}, {3.7112214737320886`*^9, 
+   3.7112216005815125`*^9}, {3.711221646669015*^9, 3.711221662478444*^9}, {
+   3.7112218609755125`*^9, 3.7112218665180483`*^9}, {3.7112219046675158`*^9, 
+   3.711221916157387*^9}, {3.7112227992655044`*^9, 3.7112228056536245`*^9}, {
+   3.7112847040913877`*^9, 3.7112847577223864`*^9}, {3.711284812490117*^9, 
+   3.7112848658191395`*^9}, 3.7112976952303095`*^9, {3.711303892888295*^9, 
+   3.7113039183902674`*^9}, {3.7113067737014728`*^9, 3.711306778503993*^9}, {
+   3.7113083050615215`*^9, 3.711308322855015*^9}, {3.7113086918642073`*^9, 
+   3.7113086970055556`*^9}, {3.7113123015775733`*^9, 
+   3.7113123054444995`*^9}, {3.7117332139906435`*^9, 3.711733378005587*^9}, {
+   3.7117334224656363`*^9, 3.7117335018313255`*^9}, {3.7117335584141226`*^9, 
+   3.711733613392913*^9}, {3.711733785719662*^9, 3.711733798230301*^9}, {
+   3.71173430120838*^9, 3.711734306475072*^9}, {3.711734931489503*^9, 
+   3.7117349357527933`*^9}, {3.7117349781904182`*^9, 3.711735001082056*^9}, {
+   3.711735405057421*^9, 3.711735408296402*^9}, {3.711740465641075*^9, 
+   3.711740465873348*^9}, {3.7117405213974237`*^9, 3.71174052261138*^9}, 
+   3.7117407121966033`*^9, {3.713886052974888*^9, 3.7138860638303223`*^9}, {
+   3.7164710767754955`*^9, 3.7164710772911263`*^9}, {3.7164711899693813`*^9, 
+   3.7164711993747997`*^9}},ExpressionUUID->"f3ba62ab-9cc5-4301-80b4-\
+dfe7a139a17b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Run on desktop", "Subsubsection",
+ CellChangeTimes->{{3.711734201578658*^9, 
+  3.7117342034364777`*^9}},ExpressionUUID->"bfabeff9-948b-4472-b4c0-\
+3b69b8d52a7d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", 
+  RowBox[{"{", 
+   RowBox[{"attR", ",", "vrate", ",", "priorR", ",", "country"}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7112850061164484`*^9, 3.711285016609449*^9}, {
+  3.711734233648608*^9, 
+  3.711734239081314*^9}},ExpressionUUID->"b64d7282-0621-40f3-9f29-\
+4b61d7f50502"],
+
+Cell[BoxData[
+ DynamicBox[
+  ToBoxes[{$CellContext`attR, $CellContext`vrate, $CellContext`priorR, \
+$CellContext`country}, StandardForm],
+  ImageSizeCache->{377., {5., 16.}}]], "Output",
+ CellChangeTimes->{
+  3.711285016964451*^9, 3.711298095203562*^9, 3.711461944001624*^9, 
+   3.7117342523962035`*^9, 3.7117343090546846`*^9, 3.711734817806873*^9, 
+   3.711735003044307*^9, 3.7117354128626137`*^9, {3.7117405175454073`*^9, 
+   3.711740526564648*^9}, 3.711740714791541*^9, 
+   3.711740813074596*^9},ExpressionUUID->"9363953a-4c26-4991-839b-\
+9c85e697e886"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7117345540984983`*^9, 
+  3.7117345576620784`*^9}},ExpressionUUID->"4cd980c9-4e0d-496f-a49a-\
+260320dc4f98"],
+
+Cell[BoxData["\<\"D:\\\\Dropbox\\\\Projects\\\\Zika vaccine\\\\Code\"\>"], \
+"Output",
+ CellChangeTimes->{
+  3.7117345580995455`*^9, 3.7117346825971675`*^9, {3.711734823720874*^9, 
+   3.7117348434558744`*^9}, 3.711735005536621*^9, 3.711735201739582*^9, 
+   3.7117354161396112`*^9, 3.7117407178757167`*^9, 
+   3.7117408182611647`*^9},ExpressionUUID->"75f66704-7a66-4f25-b7b7-\
+cc0adff11de5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AbsoluteTiming", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Do", "[", 
+    RowBox[{
+     RowBox[{"(", "\[IndentingNewLine]", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"result", "=", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"vaccResultsPriorImmunity", "[", 
+              RowBox[{"country", ",", "priorR"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"priorR", ",", 
+               RowBox[{"Range", "[", 
+                RowBox[{"0", ",", "0.95", ",", "0.05"}], "]"}]}], "}"}], ",", 
+             "1"}], "]"}], "]"}]}], "}"}], ",", 
+        RowBox[{"(", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"SetDirectory", "[", 
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<GeneratedResults/PriorRcontours\>\""}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Put", "[", 
+           RowBox[{"result", ",", 
+            RowBox[{"(", 
+             RowBox[{
+             "\"\<results\>\"", "<>", "\"\<_\>\"", "<>", "country", "<>", 
+              "\"\<.dat\>\""}], ")"}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ResetDirectory", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+         ")"}]}], "]"}], "\[IndentingNewLine]", ")"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"country", ",", 
+       RowBox[{"{", "\"\<Puerto Rico\>\"", "}"}]}], 
+      RowBox[{"(*", "CountryNames", "*)"}], "}"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.711734358640956*^9, 3.711734369530511*^9}, {
+   3.7117343998596945`*^9, 3.7117344037904444`*^9}, {3.711734438064399*^9, 
+   3.7117344908456345`*^9}, {3.7117345367616653`*^9, 3.711734608038929*^9}, 
+   3.7117346787105846`*^9, {3.7117348401698756`*^9, 3.7117348419929085`*^9}, {
+   3.7117350828904076`*^9, 3.7117350845044017`*^9}, {3.7117351919696207`*^9, 
+   3.7117351972247047`*^9}, {3.711735305442328*^9, 3.7117353101047444`*^9}, {
+   3.7117405369753156`*^9, 3.7117405500035524`*^9}, {3.71174075877802*^9, 
+   3.711740796489622*^9}, {3.716471168452565*^9, 
+   3.7164711756797533`*^9}},ExpressionUUID->"c9a078aa-5e28-49bf-88d8-\
+06cfeadafcec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"7865.189522686053`", ",", "Null"}], "}"}]], "Output",
+ CellChangeTimes->{3.711740667729228*^9, 3.7117407509559965`*^9, 
+  3.7117486839398813`*^9},ExpressionUUID->"16cb7d3a-91df-40bf-8f53-\
+2233b9c09460"]
+}, Open  ]],
+
+Cell["\<\
+Test run: model took 104s for attack rate range, with vrate, priorR, and \
+country only sampling one value each\
+\>", "Text",
+ CellChangeTimes->{{3.711740730241757*^9, 
+  3.7117407472338324`*^9}},ExpressionUUID->"f445318c-8b71-4d24-8f0b-\
+275eec20ed47"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   RowBox[{"Length", "[", 
+    RowBox[{"Range", "[", 
+     RowBox[{"0", ",", "0.95", ",", "0.05"}], "]"}], "]"}], "*", "4", "*", 
+   RowBox[{"104", "/", "3600"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7117405652882657`*^9, 3.7117405759434924`*^9}, {
+  3.711740679305015*^9, 3.7117406869152865`*^9}, {3.7117407749359903`*^9, 
+  3.711740800330996*^9}},ExpressionUUID->"230b5cd4-a665-4cf4-b7c8-\
+e09b0ac03a2e"],
+
+Cell[BoxData["2.311111111111111`"], "Output",
+ CellChangeTimes->{{3.7117406804275*^9, 3.7117406872743125`*^9}, {
+  3.71174077745754*^9, 
+  3.7117408007452374`*^9}},ExpressionUUID->"e5e2e40a-fa9b-476b-b182-\
+5e6e8dbdab59"]
 }, Open  ]]
-}, Closed]]
-}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Cluster run", "Subsubsection",
+ CellChangeTimes->{{3.7117336210711575`*^9, 
+  3.711733622152815*^9}},ExpressionUUID->"2cd6180e-56fc-48c5-a525-\
+bce5498bc154"],
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"country", "=", 
+     RowBox[{"CountryNames", "[", 
+      RowBox[{"[", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"$CommandLine", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "]"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Put", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"vaccResultsPriorImmunity", "[", 
+         RowBox[{"country", ",", "priorR"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"priorR", ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"0", ",", "0.95", ",", "0.05"}], "]"}]}], "}"}], ",", 
+        "1"}], "]"}], "]"}], ",", 
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<results\>\"", "<>", "\"\<_\>\"", "<>", "country", "<>", 
+       "\"\<.dat\>\""}], ")"}]}], "]"}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.711733627668377*^9, 3.7117337546350894`*^9}, {
+   3.7117346373906765`*^9, 3.71173464952208*^9}, 3.711913648686295*^9, {
+   3.7164711408638315`*^9, 
+   3.716471153427599*^9}},ExpressionUUID->"eeb8bdf9-facd-432a-8832-\
+05033e182656"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1280, 677},
@@ -1037,11 +1462,11 @@ Cell[1045, 36, 248, 4, 122, "Section", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[1318, 44, 159, 3, 83, "Subsection", "ExpressionUUID" -> \
 "13fc85a0-8966-465d-8e8d-b38de185d382"],
-Cell[1480, 49, 473, 12, 88, "Code", "ExpressionUUID" -> \
+Cell[1480, 49, 473, 12, 154, "Code", "ExpressionUUID" -> \
 "ddf0b250-36b5-42db-94ee-d2adbd28380d"],
-Cell[1956, 63, 505, 11, 88, "Code", "ExpressionUUID" -> \
+Cell[1956, 63, 505, 11, 154, "Code", "ExpressionUUID" -> \
 "5dfa7cda-022a-40e7-be50-65bbce4bb351"],
-Cell[2464, 76, 217, 4, 88, "Code", "ExpressionUUID" -> \
+Cell[2464, 76, 217, 4, 154, "Code", "ExpressionUUID" -> \
 "93ee99b5-8256-4e67-882e-9d4586934bab"]
 }, Closed]],
 Cell[CellGroupData[{
@@ -1050,91 +1475,151 @@ Cell[2718, 85, 176, 3, 66, "Subsection", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[2919, 92, 229, 5, 54, "Input", "ExpressionUUID" -> \
 "30b61c03-34c9-457f-a8e9-a4f8b518e8c4"],
-Cell[3151, 99, 1594, 23, 70, "Output", "ExpressionUUID" -> \
-"e71ea001-7d60-4466-bb54-49908802539d"]
+Cell[3151, 99, 1646, 24, 54, "Output", "ExpressionUUID" -> \
+"2a6e7d32-6926-49c5-8d8b-bc71377a277e"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[4782, 127, 514, 12, 119, "Code", "ExpressionUUID" -> \
-"fe7e3218-656c-44f2-b3e6-146f38f79bbf"],
-Cell[5299, 141, 445, 10, 70, "Message", "ExpressionUUID" -> \
-"0f860526-4227-476d-9a6a-b7e80f3ee180"]
-}, Open  ]]
+Cell[4812, 126, 368, 8, 88, "Code", "ExpressionUUID" -> \
+"fe7e3218-656c-44f2-b3e6-146f38f79bbf"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5793, 157, 180, 3, 66, "Subsection", "ExpressionUUID" -> \
+Cell[5217, 139, 180, 3, 66, "Subsection", "ExpressionUUID" -> \
 "97ada040-05c0-457b-bb5b-1c2f80f9c61f"],
 Cell[CellGroupData[{
-Cell[5998, 164, 208, 3, 68, "Subsubsection", "ExpressionUUID" -> \
+Cell[5422, 146, 208, 3, 119, "Subsubsection", "ExpressionUUID" -> \
 "4a372468-896e-4d06-951e-4772f5dc9821"],
-Cell[6209, 169, 2190, 49, 329, "Code", "ExpressionUUID" -> \
+Cell[5633, 151, 2190, 49, 575, "Code", "ExpressionUUID" -> \
 "8d4bc2e2-a882-4415-8b71-3075877bd6f7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8436, 223, 203, 3, 68, "Subsubsection", "ExpressionUUID" -> \
+Cell[7860, 205, 203, 3, 119, "Subsubsection", "ExpressionUUID" -> \
 "4e3c43ea-e205-4b7f-be66-1203ce98a326"],
-Cell[8642, 228, 4241, 116, 419, "Code", "ExpressionUUID" -> \
+Cell[8066, 210, 4241, 116, 733, "Code", "ExpressionUUID" -> \
 "614bd60b-06bf-4b7c-9a45-337692100cf5"],
-Cell[12886, 346, 1857, 44, 299, "Code", "ExpressionUUID" -> \
+Cell[12310, 328, 1857, 44, 523, "Code", "ExpressionUUID" -> \
 "b8c77106-1bfc-4cc3-ba67-8289422f03bb"],
-Cell[14746, 392, 2200, 63, 299, "Code", "ExpressionUUID" -> \
+Cell[14170, 374, 2200, 63, 523, "Code", "ExpressionUUID" -> \
 "5f965de3-7b85-4fcd-be40-5624405c6888"],
-Cell[16949, 457, 10356, 215, 1529, "Code", "ExpressionUUID" -> \
+Cell[16373, 439, 10356, 215, 2675, "Code", "ExpressionUUID" -> \
 "01cb6d28-31b5-4510-b56b-519c2edd8149"],
-Cell[27308, 674, 200, 4, 54, "Text", "ExpressionUUID" -> \
+Cell[26732, 656, 200, 4, 94, "Text", "ExpressionUUID" -> \
 "f23ea951-ce36-423d-982f-437baa535e58"],
-Cell[27511, 680, 921, 30, 193, "Text", "ExpressionUUID" -> \
+Cell[26935, 662, 921, 30, 337, "Text", "ExpressionUUID" -> \
 "27c809ec-b517-464e-a181-c5b4014d3b03"],
-Cell[28435, 712, 496, 19, 90, "Text", "ExpressionUUID" -> \
+Cell[27859, 694, 496, 19, 157, "Text", "ExpressionUUID" -> \
 "31424df6-43fa-491c-9e8c-18feefa4fe54"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[28980, 737, 174, 3, 66, "Subsection", "ExpressionUUID" -> \
+Cell[28404, 719, 174, 3, 66, "Subsection", "ExpressionUUID" -> \
 "296050f5-ca4d-457f-ab29-c44673368031"],
-Cell[29157, 742, 233, 4, 52, "Text", "ExpressionUUID" -> \
+Cell[28581, 724, 233, 4, 52, "Text", "ExpressionUUID" -> \
 "2e6d63b1-be0f-4bd1-857e-e3d888270d10"],
-Cell[29393, 748, 553, 14, 149, "Code", "ExpressionUUID" -> \
+Cell[28817, 730, 1227, 33, 209, "Code", "ExpressionUUID" -> \
 "79b1b928-7c53-40e7-ae86-5bdad498ed5c"]
-}, Open  ]]
+}, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[29995, 768, 194, 3, 94, "Section", "ExpressionUUID" -> \
+Cell[30093, 769, 194, 3, 94, "Section", "ExpressionUUID" -> \
 "f28e4916-1a43-476a-b766-3666eb40ec97"],
 Cell[CellGroupData[{
-Cell[30214, 775, 201, 3, 83, "Subsection", "ExpressionUUID" -> \
+Cell[30312, 776, 201, 3, 83, "Subsection", "ExpressionUUID" -> \
 "4787be02-9763-426f-8711-483819743994"],
 Cell[CellGroupData[{
-Cell[30440, 782, 305, 5, 68, "Subsubsection", "ExpressionUUID" -> \
+Cell[30538, 783, 305, 5, 68, "Subsubsection", "ExpressionUUID" -> \
 "0789a4df-8d80-4b93-be41-627993f465fe"],
 Cell[CellGroupData[{
-Cell[30770, 791, 232, 5, 54, "Input", "ExpressionUUID" -> \
+Cell[30868, 792, 232, 5, 54, "Input", "ExpressionUUID" -> \
 "84dea54f-3062-4fce-a10d-cb18017c8b02"],
-Cell[31005, 798, 447, 7, 54, "Output", "ExpressionUUID" -> \
+Cell[31103, 799, 447, 7, 54, "Output", "ExpressionUUID" -> \
 "748706e9-4af8-4aaa-a49f-c702c8fb8873"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31489, 810, 192, 4, 54, "Input", "ExpressionUUID" -> \
+Cell[31587, 811, 192, 4, 54, "Input", "ExpressionUUID" -> \
 "6a27a51c-1b04-4d71-89b3-6402936eff09"],
-Cell[31684, 816, 388, 7, 54, "Output", "ExpressionUUID" -> \
+Cell[31782, 817, 388, 7, 54, "Output", "ExpressionUUID" -> \
 "acdfa068-8db4-4552-99cc-a00bc8c815ab"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32109, 828, 6716, 134, 1041, "Input", "ExpressionUUID" -> \
+Cell[32207, 829, 6716, 134, 1041, "Input", "ExpressionUUID" -> \
 "6b3c0341-9bbb-4b3b-8725-3e706cb5254f"],
-Cell[38828, 964, 514, 9, 54, "Output", "ExpressionUUID" -> \
+Cell[38926, 965, 514, 9, 54, "Output", "ExpressionUUID" -> \
 "a9a5a55c-34f7-472b-8fbc-7ae3263afde6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39379, 978, 311, 7, 54, "Input", "ExpressionUUID" -> \
+Cell[39477, 979, 311, 7, 54, "Input", "ExpressionUUID" -> \
 "4da76c2d-8713-4a93-a8a4-4c140ba53e05"],
-Cell[39693, 987, 452, 7, 89, "Output", "ExpressionUUID" -> \
+Cell[39791, 988, 452, 7, 89, "Output", "ExpressionUUID" -> \
 "6c50bd8e-cdf3-475e-966a-84e78c732e7a"]
 }, Open  ]],
-Cell[40160, 997, 297, 8, 54, "Input", "ExpressionUUID" -> \
+Cell[40258, 998, 297, 8, 54, "Input", "ExpressionUUID" -> \
 "5d17dcef-39da-4514-830c-c8b0c38640c3"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[40616, 1013, 196, 3, 94, "Section", "ExpressionUUID" -> \
+"733c7398-fc64-47d0-82bf-e6a698341f34"],
+Cell[40815, 1018, 266, 7, 149, "Code", "ExpressionUUID" -> \
+"bb7ad88e-2388-4784-92c2-5bf3b84ab011"],
+Cell[CellGroupData[{
+Cell[41106, 1029, 216, 4, 68, "Subsubsection", "ExpressionUUID" -> \
+"4c4f8b6e-48ac-4355-b9af-5a5276a7a523"],
+Cell[41325, 1035, 411, 8, 119, "Text", "ExpressionUUID" -> \
+"5728e919-a7d3-4720-bb0a-e755462c4783"],
+Cell[41739, 1045, 3250, 66, 479, "Code", "ExpressionUUID" -> \
+"d2e34ddf-b315-4ae2-a692-0339ac333f4f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45026, 1116, 201, 3, 68, "Subsubsection", "ExpressionUUID" -> \
+"9ff422d3-491a-4953-af5f-bdd52602e97d"],
+Cell[45230, 1121, 304, 6, 86, "Text", "ExpressionUUID" -> \
+"da7bd87a-485f-43c6-80da-6cee04ec28f5"],
+Cell[CellGroupData[{
+Cell[45559, 1131, 232, 5, 54, "Input", "ExpressionUUID" -> \
+"7485d6b1-9318-4616-9348-54d5a8d81240"],
+Cell[45794, 1138, 285, 5, 54, "Output", "ExpressionUUID" -> \
+"f15e0176-ef24-4021-b245-32bc6ba34312"]
+}, Open  ]],
+Cell[46094, 1146, 5350, 101, 629, "Code", "ExpressionUUID" -> \
+"f3ba62ab-9cc5-4301-80b4-dfe7a139a17b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51481, 1252, 167, 3, 68, "Subsubsection", "ExpressionUUID" -> \
+"bfabeff9-948b-4472-b4c0-3b69b8d52a7d"],
+Cell[CellGroupData[{
+Cell[51673, 1259, 325, 8, 54, "Input", "ExpressionUUID" -> \
+"b64d7282-0621-40f3-9f29-4b61d7f50502"],
+Cell[52001, 1269, 556, 11, 54, "Output", "ExpressionUUID" -> \
+"9363953a-4c26-4991-839b-9c85e697e886"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52594, 1285, 234, 5, 54, "Input", "ExpressionUUID" -> \
+"4cd980c9-4e0d-496f-a49a-260320dc4f98"],
+Cell[52831, 1292, 390, 7, 54, "Output", "ExpressionUUID" -> \
+"75f66704-7a66-4f25-b7b7-cc0adff11de5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53258, 1304, 2268, 49, 395, "Input", "ExpressionUUID" -> \
+"c9a078aa-5e28-49bf-88d8-06cfeadafcec"],
+Cell[55529, 1355, 243, 5, 54, "Output", "ExpressionUUID" -> \
+"16cb7d3a-91df-40bf-8f53-2233b9c09460"]
+}, Open  ]],
+Cell[55787, 1363, 263, 6, 86, "Text", "ExpressionUUID" -> \
+"f445318c-8b71-4d24-8f0b-275eec20ed47"],
+Cell[CellGroupData[{
+Cell[56075, 1373, 455, 10, 54, "Input", "ExpressionUUID" -> \
+"230b5cd4-a665-4cf4-b7c8-e09b0ac03a2e"],
+Cell[56533, 1385, 221, 4, 54, "Output", "ExpressionUUID" -> \
+"e5e2e40a-fa9b-476b-b182-5e6e8dbdab59"]
 }, Open  ]]
-}, Closed]]
-}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56803, 1395, 164, 3, 68, "Subsubsection", "ExpressionUUID" -> \
+"2cd6180e-56fc-48c5-a525-bce5498bc154"],
+Cell[56970, 1400, 1159, 31, 119, "Code", "ExpressionUUID" -> \
+"eeb8bdf9-facd-432a-8832-05033e182656"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
