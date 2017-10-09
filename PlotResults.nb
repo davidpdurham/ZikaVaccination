@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    437654,       8807]
-NotebookOptionsPosition[    425393,       8499]
-NotebookOutlinePosition[    425737,       8514]
-CellTagsIndexPosition[    425694,       8511]
+NotebookDataLength[    510667,      10796]
+NotebookOptionsPosition[    493527,      10372]
+NotebookOutlinePosition[    493871,      10387]
+CellTagsIndexPosition[    493828,      10384]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -8494,6 +8494,1879 @@ ScbP7rJfYXzFgPTlv74jm4Kjh/z/nuRLGg==\
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Figure 5 - Plot frontier", "Section",
+ CellChangeTimes->{{3.7118209506828694`*^9, 3.7118209521277747`*^9}, {
+  3.7119011816801257`*^9, 
+  3.7119011828583775`*^9}},ExpressionUUID->"366b1142-1dda-4158-928d-\
+26d37c1c3465"],
+
+Cell[CellGroupData[{
+
+Cell["Compute best fit hull/frontier for Puerto Rico", "Subsection",
+ CellChangeTimes->{{3.7118869912644653`*^9, 
+  3.7118869976194644`*^9}},ExpressionUUID->"0501b779-924e-4a26-945a-\
+57bad2e10798"],
+
+Cell[CellGroupData[{
+
+Cell["Read in results", "Subsubsection",
+ CellChangeTimes->{{3.711296826475024*^9, 
+  3.711296827584399*^9}},ExpressionUUID->"13b7757c-22b1-40bc-8123-\
+c2b6d24d5dea"],
+
+Cell["No vaccine scenario", "Text",
+ CellChangeTimes->{{3.711296429800883*^9, 
+  3.711296431461611*^9}},ExpressionUUID->"b7e3fdab-3314-4410-938f-\
+2a010f82132e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{
+   RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+   "\"\</GeneratedResults/AgeScenarios/\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7112259255079165`*^9, 3.7112259567139177`*^9}, {
+   3.711821047184838*^9, 3.7118210474035883`*^9}, 3.7143926711125436`*^9, {
+   3.7153508943470488`*^9, 
+   3.715350898084341*^9}},ExpressionUUID->"11b2f4a7-da77-4464-a17a-\
+f43fa23c793b"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\carbon\\\\Dropbox\\\\Code\\\\Git\\\\\
+ZikaVaccineModel\\\\GeneratedResults\\\\AgeScenarios\"\>"], "Output",
+ CellChangeTimes->{
+  3.711225926921446*^9, 3.7112259570330687`*^9, 3.71128642258471*^9, {
+   3.711296405743632*^9, 3.7112964348461504`*^9}, 3.711299666172016*^9, {
+   3.7118210278233013`*^9, 3.711821047952215*^9}, 3.7118784764058795`*^9, 
+   3.7118869549157124`*^9, 3.7121822683551855`*^9, 3.7132652665345335`*^9, 
+   3.7143926731307573`*^9, 3.7153508986936007`*^9, 
+   3.716497290551228*^9},ExpressionUUID->"33199db5-0501-45de-9a05-\
+f7084bc86e32"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"noVaccineResult", "=", 
+   RowBox[{
+   "Get", "[", "\"\<noVaccineResult_Puerto Rico_attR_0.25_lag_0.dat\>\"", 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.711225968146036*^9, 3.7112259822294188`*^9}, {
+   3.7112964070248766`*^9, 3.7112964388419967`*^9}, {3.714392695386805*^9, 
+   3.7143927241392665`*^9}, 
+   3.7164972960367055`*^9},ExpressionUUID->"b10225c9-0357-4915-a8a2-\
+d62b8c1aad4d"],
+
+Cell["Core scenarios", "Text",
+ CellChangeTimes->{{3.711296426981943*^9, 
+  3.7112964285400953`*^9}},ExpressionUUID->"32477056-e01f-4abf-8734-\
+5cb4c5452e16"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vaccResultsFrontier", "=", 
+   RowBox[{
+   "Get", "[", "\"\<resultsFrontier_Puerto Rico_attR_0.25_lag_0.dat\>\"", 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.711225968146036*^9, 3.7112259822294188`*^9}, {
+   3.711295813586233*^9, 3.7112958157235885`*^9}, {3.7143927409429507`*^9, 
+   3.714392750905238*^9}, 
+   3.7164973011411343`*^9},ExpressionUUID->"4bdf3be9-44f8-4900-ba44-\
+94d6a4160c51"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plot", "Subsubsection",
+ CellChangeTimes->{{3.711296829881299*^9, 
+  3.711296830350047*^9}},ExpressionUUID->"83f3fbbe-96b3-4721-8e0b-\
+ab9d38d17e8a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"computedResults", "=", 
+   RowBox[{"computedResultsFunction", "[", 
+    RowBox[{"noVaccineResult", ",", "vaccResultsFrontier"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.71188705695009*^9, 
+  3.7118870623193283`*^9}},ExpressionUUID->"9169ff53-fdea-4596-a5d5-\
+b5088c2960c8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Tooltip", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{";;", "2"}], "]"}], "]"}], ",", 
+       RowBox[{"#", "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+    "computedResults"}], ",", 
+   RowBox[{"Frame", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"True", ",", "True", ",", "False", ",", "False"}], "}"}]}], ",", 
+   RowBox[{"FrameLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Infections averted\>\"", ",", "\"\<Vaccines administered\>\""}], 
+     "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7112260371408253`*^9, 3.7112261106170483`*^9}, 
+   3.7112263436603136`*^9, {3.711299919469479*^9, 3.711299945352968*^9}, {
+   3.711300161196703*^9, 
+   3.7113001899828796`*^9}},ExpressionUUID->"1da98e61-3456-43eb-935e-\
+962cb28d5c8b"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.009166666666666668],
+       AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxFVX001GkUHq3VqOHINErRwcz4HDIjGoet37VK0awholJN1lfFGmprVWp8
+FVJHSlmFkfLNGPORom1s7aJapi+2bfesY1sGbYlIJ2rrfedMf8yZc8+97/M8
+773PfX/WkYnB0XNIJNJ3H3+f/ls+dJQTVzKJzNGgFlLrG6Jzj4wj3X4WxcTE
+XHjOeketKy8jKoRf5Y7FmIJxWtX9RSlVOK8wh4GnpfGN4xKC4+a2lySzgjTG
+lHnxg2ZUb7WRAVaUkyvHE+XEwka/cmLCDngKD18XDwU6H1fsBM0lNgl6FxTE
+a/uIHiFzOfStV6663q9AeC0hbIg7w8leSM5C9SKnaaJN7XyDt/8cigVjZBjv
+z5gsvVyB+ES/UsE59+F2Dq8B6zuwFLzItDb6OynCU221hr92Ta1zHJKh+v53
+DEjem1IQ0SsnqB/1kSvswSSamZMbhPWZuLAg+4Sae7AK6zNpXg6LqZvuGnNz
+tPd/S1zMf+lkPlSq5ZsPp22ODxsH1SJ8QTwNSMv++0AiSVFeXG8B2873Sq77
+yJAe4ZQ1+Drw7aIEclRfVMKEkKvyJz9PYj1iewdY4bJ5RLBDoT3PgunF7SeN
+DLTz8Zwl+Fma5Ec+lSi2em8EpuZtnSJbCcLjrzaDmSdnu/19mlE+/6glUHgs
+vbNlmH8sxgb8djh6tkZg/ulXTJCZHOnRH8T80987QDrtaRij9CL2x633hObm
+i9YTc2pwPGAEMYf87LxvYT6CbQYaySPZmWtSHV/MyE7oUjcjPrW/DcyLPXBs
+uhL3X93NhPoA+oO4gmKMpzdLJAZ9QUq3rtTGRpB3uHrViYQ6bT0Nlsky6JLh
+RpTvf2YBHjMGdxwHmnT95Nun54Z3F+rwujykI5LOctwfSyM4luG7TXWmEuGJ
+L9Nga2/fmpSGWt18fCP41IbIfF1/XzsFGPvOw/dXdVKA5C9SjVhV6OYrvrl2
+MOS11g/hM8S6mAN6b5KKMJ83BeyjrKiRe7OxHqsZ4vCUOulQOZ6f2I8MO38b
+HIt5WoH9VrsYfI62592/Vo/wW8zocNsvanSIi+cXXucI7P3qHref5Oi+FBc2
+5AR6Bd7TKFA9q3sF/MMxjU2MU6L5eQu4sHPPA7fQC0p0fsO4FxSu2a1xlCqR
+nxkbV8N1EpMWfUOJ8JIDAZpSDo72fI37J6IYwh9/mhJ9vCtYr+ESMOG5ug08
+xPMW/siAgmFnTXqVDOVd/Vlwkbf1xUQC3l/uL2zYItw9keOqRPXrwtxBP5UI
+XH4E6wsf5gJDEBvWUKbUnveGwoTMe/HNWN9Y4Wrw/rInsoaO+6kymA/fFq0N
+lW+o0c2ruq1y1mZaivBN5tpC47aV4uM1cpTn+zkDHbrsM3oVhNun98SdA89u
+ONr6BWI9nR3ukJTXmVmWoUTvk9jeE/ZvSuC+EGM9gn3eoHmcdzqqowz3I9gY
+/h1cE98egv2nyl0GrDz9xD0E9rM4yxbODSvOjdrhfVXVOMM3PsxgwbhCu28c
+KNliS+0K+Mzve7Do5YdU3I9sqid4e4WVvdpdod03Y3gr6rh9akii3TdLGBmI
+jT7ClxGXPr2vNFtwrG99Hjwo1/rVGVZWGnjQq/F9f5hlQ9PjpKtmizAfd707
+cFID7sx6XdLtl8hhU0NySYPW3xZQIIkNdF2A329RNhN8gkcT6/7+PN/yVFEe
++Y0c4f8uZMOp7A5K2nwx7k8+BWY1eWb6+2q1sQWUGtD1i8834e+HIRNaHvIn
+N/dhPwvLneCeJdvIYPMF3XnVpFIg3IW/L+K7SyF0Qe610EeN+D1LZUCbk+Gz
+iKPndX5oH3te3XYc+1PQvARWkNMG+nbg7wNp+zz4H3rMJy0=
+       "]]}, {}}, {
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{660.6565585732378, 97200.04499999998}}]},
+       "\"0 to 4 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 4 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1303.6730449709448`, 196200.08999999997`}}]},
+       "\"0 to 9 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 9 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2024.4170684095543`, 301500.13499999995`}}]},
+       "\"0 to 14 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 14 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3004.546521410469, 421200.17999999993`}}]},
+       "\"0 to 19 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 19 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4089.340672458974, 547200.2249999999}}]},
+       "\"0 to 24 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 24 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4818.601958640968, 666000.2699999999}}]},
+       "\"0 to 29 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 29 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5231.946160140476, 784800.315}}]},
+       "\"0 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5430.180728358519, 904500.3599999999}}]},
+       "\"0 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5531.005571521282, 1.0206004049999998`*^6}}]},
+       "\"0 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5600.727519410159, 1.1358004499999997`*^6}}]},
+       "\"0 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{673.0100254012332, 99000.04499999998}}]},
+       "\"5 to 9 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 9 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1437.5759169729854`, 204300.08999999997`}}]},
+       "\"5 to 14 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 14 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2514.3104668819515`, 324000.13499999995`}}]},
+       "\"5 to 19 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 19 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3750.5983797174617`, 450000.17999999993`}}]},
+       "\"5 to 24 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 24 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4603.139588655958, 568800.2249999999}}]},
+       "\"5 to 29 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 29 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5095.165175820203, 687600.2699999999}}]},
+       "\"5 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5334.361610022244, 807300.3149999998}}]},
+       "\"5 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5457.541155183004, 923400.3599999999}}]},
+       "\"5 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5543.477429422441, 1.0386004049999998`*^6}}]},
+       "\"5 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{807.0072237705781, 105300.04499999998`}}]},
+       "\"10 to 14 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 14 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1977.7745816642773`, 225000.08999999997`}}]},
+       "\"10 to 19 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 19 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3368.5291254262634`, 351000.13499999995`}}]},
+       "\"10 to 24 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 24 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4352.003905124497, 469800.17999999993`}}]},
+       "\"10 to 29 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 29 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4930.729245578722, 588600.2249999999}}]},
+       "\"10 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5216.391224870753, 708300.2699999999}}]},
+       "\"10 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5365.761134428747, 824400.3149999998}}]},
+       "\"10 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5471.3785758722115`, 939600.3599999999}}]},
+       "\"10 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1281.513236062192, 119700.04499999998`}}]},
+       "\"15 to 19 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 19 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2849.414939180635, 245700.08999999997`}}]},
+       "\"15 to 24 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 24 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3987.2515314846614`, 364500.13499999995`}}]},
+       "\"15 to 29 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 29 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4674.292214682788, 483300.17999999993`}}]},
+       "\"15 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5023.578142899332, 603000.2249999999}}]},
+       "\"15 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5212.731341026555, 719100.2699999999}}]},
+       "\"15 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5350.018791083409, 834300.3149999998}}]},
+       "\"15 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1831.5354913932683`, 126000.04499999998`}}]},
+       "\"20 to 24 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 24 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3201.272918187071, 244800.08999999997`}}]},
+       "\"20 to 29 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 29 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4065.617487176717, 363600.13499999995`}}]},
+       "\"20 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4537.576962750383, 483300.17999999993`}}]},
+       "\"20 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4816.786153907515, 599400.2249999999}}]},
+       "\"20 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5030.970801794678, 714600.2699999999}}]},
+       "\"20 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1700.602364112371, 118800.04499999998`}}]},
+       "\"25 to 29 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 29 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2832.753906348887, 237600.08999999997`}}]},
+       "\"25 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3510.7719624187503`, 357300.13499999995`}}]},
+       "\"25 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3956.842067828765, 473400.17999999993`}}]},
+       "\"25 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4322.167145191741, 588600.2249999999}}]},
+       "\"25 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1395.58646586772, 118800.04499999998`}}]},
+       "\"30 to 34 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 34 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2276.343587434709, 238500.08999999997`}}]},
+       "\"30 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2889.8757115755607`, 354600.13499999995`}}]},
+       "\"30 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3414.7368609856762`, 469800.17999999993`}}]},
+       "\"30 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1048.6690189892115`, 119700.04499999998`}}]},
+       "\"35 to 39 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "35 to 39 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1794.5664607759072`, 235800.08999999997`}}]},
+       "\"35 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "35 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2448.458499917062, 351000.13499999995`}}]},
+       "\"35 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "35 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{830.5414548423032, 116100.04499999998`}}]},
+       "\"40 to 44 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "40 to 44 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1564.491216531389, 231300.08999999997`}}]},
+       "\"40 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "40 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{782.4228880434575, 115200.04499999998`}}]},
+       "\"45 to 49 Women\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "45 to 49 Women", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1320.3705513620798`, 198900.08999999997`}}]},
+       "\"0 to 4 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 4 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2541.701056683131, 404100.17999999993`}}]},
+       "\"0 to 9 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 9 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3676.9092770068974`, 625500.2699999999}}]},
+       "\"0 to 14 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 14 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4664.905935542603, 873900.3599999999}}]},
+       "\"0 to 19 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 19 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5310.202389744621, 1.1259004499999997`*^6}}]},
+       "\"0 to 24 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 24 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5608.798083979528, 1.3635005399999998`*^6}}]},
+       "\"0 to 29 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 29 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5736.435166490005, 1.5975006299999997`*^6}}]},
+       "\"0 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5787.332821990219, 1.8315007199999997`*^6}}]},
+       "\"0 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5809.167608873356, 2.0529008099999996`*^6}}]},
+       "\"0 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5821.394853890111, 2.2689008999999994`*^6}}]},
+       "\"0 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "0 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1360.9530467163822`, 205200.08999999997`}}]},
+       "\"5 to 9 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 9 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2726.9204107184023`, 426600.17999999993`}}]},
+       "\"5 to 14 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 14 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4073.941796788604, 675000.2699999999}}]},
+       "\"5 to 19 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 19 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5031.511355275654, 927000.3599999999}}]},
+       "\"5 to 24 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 24 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5485.952855783889, 1.1646004499999997`*^6}}]},
+       "\"5 to 29 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 29 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5680.538870479993, 1.3986005399999998`*^6}}]},
+       "\"5 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5758.184803038141, 1.6326006299999997`*^6}}]},
+       "\"5 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5791.677114926311, 1.8540007199999997`*^6}}]},
+       "\"5 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5810.424995686296, 2.0700008099999996`*^6}}]},
+       "\"5 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "5 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1544.915415987677, 221400.08999999997`}}]},
+       "\"10 to 14 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 14 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3238.352213102438, 469800.17999999993`}}]},
+       "\"10 to 19 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 19 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4600.136682911929, 721800.2699999999}}]},
+       "\"10 to 24 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 24 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5289.529788456317, 959400.3599999999}}]},
+       "\"10 to 29 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 29 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5590.512341097262, 1.19340045*^6}}]},
+       "\"10 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5711.277926131592, 1.4274005399999998`*^6}}]},
+       "\"10 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5763.623119863784, 1.64880063*^6}}]},
+       "\"10 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], 
+        PointBox[{{5792.9305485092245`, 1.8648007199999997`*^6}}]},
+       "\"10 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "10 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2033.848211479717, 248400.08999999997`}}]},
+       "\"15 to 19 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 19 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3882.3777791828493`, 500400.17999999993`}}]},
+       "\"15 to 24 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 24 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4928.419662746641, 738000.2699999999}}]},
+       "\"15 to 29 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 29 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5415.920268411186, 972000.3599999999}}]},
+       "\"15 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5618.376253441513, 1.2060004499999997`*^6}}]},
+       "\"15 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5707.785448453066, 1.4274005399999998`*^6}}]},
+       "\"15 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5757.999749688959, 1.6434006299999997`*^6}}]},
+       "\"15 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "15 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2485.4719187984283`, 252000.08999999997`}}]},
+       "\"20 to 24 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 24 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4083.7788450570047`, 489600.17999999993`}}]},
+       "\"20 to 29 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 29 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4944.493734829806, 723600.2699999998}}]},
+       "\"20 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5350.323924760372, 957600.3599999999}}]},
+       "\"20 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5544.137543120937, 1.17900045*^6}}]},
+       "\"20 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5655.088736643476, 1.3950005399999998`*^6}}]},
+       "\"20 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "20 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2333.995684012444, 237600.08999999997`}}]},
+       "\"25 to 29 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 29 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3790.723978703085, 471600.17999999993`}}]},
+       "\"25 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4625.1887116244925`, 705600.2699999999}}]},
+       "\"25 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5087.66967650183, 927000.3599999999}}]},
+       "\"25 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{5367.0333938891135`, 1.14300045*^6}}]},
+       "\"25 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "25 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2053.7520506242936`, 234000.08999999997`}}]},
+       "\"30 to 34 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 34 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3386.0079845461282`, 468000.17999999993`}}]},
+       "\"30 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4247.6016256228595`, 689400.2699999999}}]},
+       "\"30 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{4823.3513994709865`, 905400.3599999999}}]},
+       "\"30 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "30 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1750.2559096979558`, 234000.08999999997`}}]},
+       "\"35 to 39 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "35 to 39 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2996.7194878745067`, 455400.17999999993`}}]},
+       "\"35 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "35 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{3946.1674311777265`, 671400.2699999999}}]},
+       "\"35 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "35 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1503.8407136376327`, 221400.08999999997`}}]},
+       "\"40 to 44 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "40 to 44 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{2755.868476299657, 437400.17999999993`}}]},
+       "\"40 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "40 to 49 All", "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       {Opacity[0.], PointBox[{{1431.9608249818093`, 216000.08999999997`}}]},
+       "\"45 to 49 All\"",
+       TooltipStyle->"TextStyling"],
+      Annotation[#, "45 to 49 All", 
+       "Tooltip"]& ]}}, {}, {}, {{}, {}}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{True, False}, {True, False}},
+  FrameLabel->{{
+     FormBox["\"Vaccines administered\"", TraditionalForm], None}, {
+     FormBox["\"Infections averted\"", TraditionalForm], None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 5821.394853890111}, {0, 2.2689008999999994`*^6}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.715350908470413*^9, 
+  3.7164973106595507`*^9},ExpressionUUID->"bbd04d83-9d51-4588-a948-\
+88bb009792d7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Compute convex hull", "Subsubsection",
+ CellChangeTimes->{{3.7112997213682256`*^9, 
+  3.711299723276655*^9}},ExpressionUUID->"91fbd5b6-ded2-4997-a77d-\
+05b98d390a62"],
+
+Cell["\<\
+Compute the scenario with fewest number of vaccines administered\
+\>", "Text",
+ CellChangeTimes->{{3.711300290826974*^9, 
+  3.7113003013656125`*^9}},ExpressionUUID->"41f62895-a041-4094-9962-\
+cfdfad830d69"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"minVaccScen", "=", 
+  RowBox[{"MinimalBy", "[", 
+   RowBox[{"computedResults", ",", "Second"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7118212744431715`*^9, 3.7118212904569364`*^9}, {
+  3.7118213235258737`*^9, 
+  3.7118213244091825`*^9}},ExpressionUUID->"663f957a-81ea-4e3e-ade4-\
+32e0e44bc6b1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+   "660.6565585732378`", ",", "97200.04499999998`", 
+    ",", "\<\"0 to 4 Women\"\>"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.7118212635770245`*^9, 3.711821292636052*^9}, 
+   3.711821324780282*^9, 3.7118213576011524`*^9, 3.711878538003061*^9, 
+   3.713265278478501*^9, 3.714392789102459*^9, 3.71535092762965*^9, 
+   3.7153510668782344`*^9, 
+   3.716497317269709*^9},ExpressionUUID->"959b5777-5434-400f-b620-\
+b340c4536f4f"]
+}, Open  ]],
+
+Cell["Extract subset remaining", "Text",
+ CellChangeTimes->{{3.711300411657172*^9, 
+  3.711300415350934*^9}},ExpressionUUID->"13149ee8-ec42-4da0-8d55-\
+b31844a588eb"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"computedResultsSubset", "=", 
+   RowBox[{"Complement", "[", 
+    RowBox[{"computedResults", ",", "minVaccScen"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.711300325735155*^9, 3.7113003444726577`*^9}, {
+  3.7113004009617133`*^9, 
+  3.711300407962906*^9}},ExpressionUUID->"08ffc239-6acb-4548-bf0c-\
+a64f741d9c12"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"minVaccScen", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.7113005225447035`*^9},ExpressionUUID->"16949a76-7e2c-406e-80af-\
+e300c00be92f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "660.6565585732378`", ",", "97200.04499999998`", 
+   ",", "\<\"0 to 4 Women\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.71130052287255*^9, 3.7118212952777214`*^9, 
+  3.711821359706375*^9, 3.7118785399717865`*^9, 3.7132652785097513`*^9, 
+  3.714392792383116*^9, 3.715350931876376*^9, 3.7153510688745737`*^9, 
+  3.7164973234001904`*^9},ExpressionUUID->"9a94c4e6-8112-45cd-a568-\
+eaf3763bdff3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MinimalBy", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Append", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "-", 
+           RowBox[{"minVaccScen", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "-", 
+           RowBox[{"minVaccScen", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ")"}]}], ")"}]}], "]"}],
+      "&"}], "/@", "computedResultsSubset"}], ",", "Last"}], "]"}]], "Input",
+ CellChangeTimes->{{3.711300538331562*^9, 
+  3.7113006075783834`*^9}},ExpressionUUID->"254e4a78-46d9-4956-bf0b-\
+614c04d51672"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+   "1721.4762835653987`", ",", "118800.04499999998`", 
+    ",", "\<\"25 to 29 Women\"\>", ",", "21.353163001753376`"}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7113006081752276`*^9, 3.7118212983104095`*^9, 
+  3.711821361016116*^9, 3.7118785408223486`*^9, 3.713265278525375*^9, 
+  3.714392793559104*^9, 3.7153509351524153`*^9, 
+  3.7153510696506786`*^9},ExpressionUUID->"3e2c9fe6-d75f-4d4e-818d-\
+442839de9fd7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"computeConvexHull", "[", "computedResults", "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{
+  3.7118230194893394`*^9},ExpressionUUID->"cd72e27b-9026-4d5e-b416-\
+e8965298ba13"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"",2,19,3,26337828076168900933,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7118230198766894`*^9, 3.7118785507822313`*^9, 
+  3.713265278587903*^9, 3.714392794419652*^9, 3.7153509362819295`*^9, 
+  3.7153510379565287`*^9, 3.715351070489605*^9, 
+  3.7164973326703024`*^9},ExpressionUUID->"06734689-98c9-4594-9c7e-\
+486fe07763f6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"",2,19,4,26337828076168900933,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7118230198766894`*^9, 3.7118785507822313`*^9, 
+  3.713265278587903*^9, 3.714392794419652*^9, 3.7153509362819295`*^9, 
+  3.7153510379565287`*^9, 3.715351070489605*^9, 
+  3.716497332826574*^9},ExpressionUUID->"e3e25e05-a55b-44af-8e51-\
+d99580c41c76"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+\\\"}\\\"}]\\) does not exist.\"",2,19,5,26337828076168900933,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7118230198766894`*^9, 3.7118785507822313`*^9, 
+  3.713265278587903*^9, 3.714392794419652*^9, 3.7153509362819295`*^9, 
+  3.7153510379565287`*^9, 3.715351070489605*^9, 
+  3.7164973328734293`*^9},ExpressionUUID->"30c272b6-c457-4174-b0fd-\
+46970db531cd"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
+\\\"partw\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,19,6,26337828076168900933,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.7118230198766894`*^9, 3.7118785507822313`*^9, 
+  3.713265278587903*^9, 3.714392794419652*^9, 3.7153509362819295`*^9, 
+  3.7153510379565287`*^9, 3.715351070489605*^9, 
+  3.7164973329359226`*^9},ExpressionUUID->"f99aa35f-eea4-4461-b40b-\
+87d464cb2c97"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", "[", 
+  RowBox[{"[", 
+   RowBox[{";;", "2"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.71535103942102*^9, 
+  3.715351040936331*^9}},ExpressionUUID->"802b5e7f-9f1a-45f9-86ff-\
+7825e257dc47"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "660.6565585732378`", ",", "97200.04499999998`", 
+     ",", "\<\"0 to 4 Women\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1700.602364112371`", ",", "118800.04499999998`", 
+     ",", "\<\"25 to 29 Women\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.715351041159037*^9, 3.71535107149113*^9, 
+  3.7164973330296783`*^9},ExpressionUUID->"65157896-748a-4073-ba37-\
+8fb14ec2704d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"StringReplace", "[", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "3", "]"}], "]"}], ",", "\"\<Women\>\""}], "]"}], 
+          ",", 
+          RowBox[{"\"\<F \>\"", "<>", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], ",", 
+             RowBox[{"\"\< Women\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}]}], 
+          ",", 
+          RowBox[{"\"\<M/F \>\"", "<>", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], ",", 
+             RowBox[{"\"\< All\>\"", "\[Rule]", "\"\<\>\""}]}], "]"}]}]}], 
+         "]"}], ",", 
+        RowBox[{"\"\< to \>\"", "\[Rule]", "\"\<-\>\""}]}], "]"}]}], "}"}], 
+    "&"}], "/@", "data"}]}]], "Input",
+ CellChangeTimes->{{3.7118793383894916`*^9, 
+  3.7118795041270747`*^9}},ExpressionUUID->"cdb69c81-44cd-46a3-b058-\
+f97659424278"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "660.6565585732378`", ",", "97200.04499999998`", ",", "\<\"F 0-4\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1700.602364112371`", ",", "118800.04499999998`", 
+     ",", "\<\"F 25-29\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1831.5354913932683`", ",", "126000.04499999998`", 
+     ",", "\<\"F 20-24\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "3201.272918187071`", ",", "244800.08999999997`", 
+     ",", "\<\"F 20-29\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4065.617487176717`", ",", "363600.13499999995`", 
+     ",", "\<\"F 20-34\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "4674.292214682788`", ",", "483300.17999999993`", 
+     ",", "\<\"F 15-34\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5023.578142899332`", ",", "603000.2249999999`", ",", "\<\"F 15-39\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5216.391224870753`", ",", "708300.2699999999`", ",", "\<\"F 10-39\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5365.761134428747`", ",", "824400.3149999998`", ",", "\<\"F 10-44\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5457.541155183004`", ",", "923400.3599999999`", ",", "\<\"F 5-44\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5471.3785758722115`", ",", "939600.3599999999`", 
+     ",", "\<\"F 10-49\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5531.005571521282`", ",", "1.0206004049999998`*^6", 
+     ",", "\<\"F 0-44\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5543.477429422441`", ",", "1.0386004049999998`*^6", 
+     ",", "\<\"F 5-49\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5600.727519410159`", ",", "1.1358004499999997`*^6", 
+     ",", "\<\"F 0-49\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5711.277926131592`", ",", "1.4274005399999998`*^6", 
+     ",", "\<\"M/F 10-39\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5763.623119863784`", ",", "1.64880063`*^6", ",", "\<\"M/F 10-44\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5791.677114926311`", ",", "1.8540007199999997`*^6", 
+     ",", "\<\"M/F 5-44\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5792.9305485092245`", ",", "1.8648007199999997`*^6", 
+     ",", "\<\"M/F 10-49\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5809.167608873356`", ",", "2.0529008099999996`*^6", 
+     ",", "\<\"M/F 0-44\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5810.424995686296`", ",", "2.0700008099999996`*^6", 
+     ",", "\<\"M/F 5-49\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "5821.394853890111`", ",", "2.2689008999999994`*^6", 
+     ",", "\<\"M/F 0-49\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7153509418803635`*^9, {3.7153510580340796`*^9, 3.7153510723817453`*^9}, 
+   3.7164973429266295`*^9},ExpressionUUID->"e34fbd4e-fa1b-4213-9faf-\
+f419cea0ed56"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"leaderLength", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "100000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"-", "100000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"500", ",", 
+        RowBox[{"-", "250000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"350", ",", 
+        RowBox[{"-", "175000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"300", ",", 
+        RowBox[{"-", "110000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"200", ",", 
+        RowBox[{"-", "50000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "200"}], ",", 
+        RowBox[{"-", "50000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"200", ",", 
+        RowBox[{"-", "50000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "200"}], ",", 
+        RowBox[{"-", "75000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"200", ",", 
+        RowBox[{"-", "75000"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "400"}], ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "300"}], ",", "150000"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"150", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"200", ",", "100000"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "400."}], ",", "0."}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0.", ",", "0."}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "400"}], ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"5000.", ",", 
+       RowBox[{"-", "480000."}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2700.", ",", 
+       RowBox[{"-", "320000."}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1300.", ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2700.", ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"9200.", ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"6400.", ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2300.", ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1300.", ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "500."}], ",", "20000."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"400.", ",", 
+       RowBox[{"-", "40000."}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "500."}], ",", "20000."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1800.", ",", "100000."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"900.", ",", "40000."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1400."}], ",", "0."}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]}], "}"}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], ",", 
+     RowBox[{"Length", "@", "data"}]}], "]"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.7118230440058184`*^9, 3.711823054465211*^9}, {
+   3.711823143448863*^9, 3.7118231459233513`*^9}, {3.711823197169255*^9, 
+   3.711823216708009*^9}, {3.711824548834297*^9, 3.711824555449226*^9}, {
+   3.7118802836244535`*^9, 3.711880284155735*^9}, {3.7132664159606895`*^9, 
+   3.713266460838232*^9}, {3.714392858411704*^9, 3.714392863147091*^9}, 
+   3.7153509620824804`*^9, {3.7153520166697845`*^9, 
+   3.715352026206786*^9}},ExpressionUUID->"c548d198-f6a0-4929-853f-\
+430701f21645"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Plot frontier with variable labels", "Subsection",
+ CellChangeTimes->{{3.7132654691085577`*^9, 
+  3.7132654745310287`*^9}},ExpressionUUID->"f5b48d94-4b63-4b90-a633-\
+baae29f85dcb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"len", "=", "100"}], ",", 
+     RowBox[{"xmin", "=", 
+      RowBox[{"-", "40000"}]}], ",", 
+     RowBox[{"ymin", "=", 
+      RowBox[{"-", "2500000"}]}], ",", 
+     RowBox[{"xmax", "=", "40000"}], ",", 
+     RowBox[{"ymax", "=", "2500000"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"TabView", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "4", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "5", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "6", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "7", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "8", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "9", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "10", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "11", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "12", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "13", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "14", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "15", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "16", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "17", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "18", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "19", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "20", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Slider2D", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", 
+         RowBox[{"leaderLength", "[", 
+          RowBox[{"[", "21", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xmin", ",", "ymin"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"xmax", ",", "ymax"}], "}"}]}], "}"}]}], "]"}]}], "}"}], 
+    "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7118235310420227`*^9, 3.7118236583601465`*^9}, {
+   3.711824119014201*^9, 3.7118241237736287`*^9}, {3.711824222624226*^9, 
+   3.711824239434323*^9}, {3.7118245920523376`*^9, 3.7118246000557184`*^9}, {
+   3.7118246398466864`*^9, 3.711824687693446*^9}, {3.7118248972994404`*^9, 
+   3.7118249033303337`*^9}, {3.7143928717117004`*^9, 3.7143928810028267`*^9}, 
+   3.715351092524763*^9},ExpressionUUID->"ac621e09-d68b-4ef9-a6d8-\
+24582929f6dd"],
+
+Cell[BoxData[
+ TabViewBox[{{1,"1"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 1]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {2,"2"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 2]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {3,"3"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 3]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {4,"4"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 4]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {5,"5"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 5]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {6,"6"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 6]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {7,"7"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 7]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {8,"8"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 8]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {9,"9"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 9]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {10,"10"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 10]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {11,"11"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 11]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {12,"12"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 12]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {13,"13"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 13]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {14,"14"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 14]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {15,"15"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 15]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {16,"16"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 16]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {17,"17"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 17]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {18,"18"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 18]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {19,"19"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 19]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {20,"20"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 20]], {{-40000, -2500000}, {40000, 
+   2500000}}]}, {21,"21"->
+  Slider2DBox[Dynamic[
+    Part[$CellContext`leaderLength, 21]], {{-40000, -2500000}, {40000, 
+   2500000}}]}}, 1]], "Output",
+ CellChangeTimes->{
+  3.711823667014922*^9, {3.711824124271172*^9, 3.7118243055949078`*^9}, 
+   3.7118246031065063`*^9, {3.7118246895998755`*^9, 3.7118248497707577`*^9}, {
+   3.711824904814109*^9, 3.7118249143475895`*^9}, 3.711878566229413*^9, {
+   3.7118786007266245`*^9, 3.7118786206123314`*^9}, {3.711878656751974*^9, 
+   3.711878780370401*^9}, {3.711878850566442*^9, 3.711878857682785*^9}, 
+   3.711878896028271*^9, 3.711878956328862*^9, {3.711880066071535*^9, 
+   3.7118801190712385`*^9}, 3.711880257767607*^9, 3.713265278711173*^9, 
+   3.7132655029372663`*^9, {3.7132660616343365`*^9, 3.713266080519166*^9}, 
+   3.7132661114091177`*^9, {3.71326617060327*^9, 3.713266208677672*^9}, {
+   3.7132662512940893`*^9, 3.7132663077498307`*^9}, {3.7132663422301683`*^9, 
+   3.7132663882500334`*^9}, 3.7142386093911486`*^9, 3.714392814352299*^9, 
+   3.714392884064226*^9, 3.715350976721706*^9, {3.7153510842470865`*^9, 
+   3.715351174972943*^9}},ExpressionUUID->"d21de852-2091-4a71-bd72-\
+88424fac345e"]
+}, Open  ]],
+
+Cell["\<\
+Use the 2d slider bars above to adjust the position of each of the 18 labels\
+\>", "Text",
+ CellChangeTimes->{{3.711880498832466*^9, 
+  3.7118805091929064`*^9}},ExpressionUUID->"29419a6c-6385-46c7-9dd4-\
+699890eef82c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"leaderLength", "[", 
+   RowBox[{"[", "5", "]"}], "]"}], "=", 
+  RowBox[{"{", 
+   RowBox[{"300", ",", 
+    RowBox[{"-", "110000"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.715351185609603*^9, 3.715351570098712*^9}, {
+  3.7153516030247135`*^9, 
+  3.715351997541782*^9}},ExpressionUUID->"9eff08e2-1a2c-463a-b7f8-\
+274188f22bec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"300", ",", 
+   RowBox[{"-", "110000"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7153514163557177`*^9, 3.7153515714086*^9}, {
+  3.715351606219715*^9, 
+  3.7153519990798116`*^9}},ExpressionUUID->"3eadc0b8-8070-421c-af53-\
+c9f0035c106d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dynamic", "@", 
+  RowBox[{"ListPlot", "[", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"computedResults", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", 
+         RowBox[{";;", "2"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Callout", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"hull", ",", 
+               RowBox[{";;", "2"}]}], "]"}], "]"}], ",", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"data", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"hull", ",", "3"}], "]"}], "]"}], ",", 
+                "\"\<M/F\>\""}], "]"}], ",", "Black", ",", "Red"}], "]"}]}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"StringSplit", "[", 
+            RowBox[{
+             RowBox[{"data", "[", 
+              RowBox[{"[", 
+               RowBox[{"hull", ",", "3"}], "]"}], "]"}], ",", "\"\< \>\""}], 
+            "]"}], "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"hull", ",", 
+              RowBox[{";;", "2"}]}], "]"}], "]"}], "+", 
+           RowBox[{"leaderLength", "[", 
+            RowBox[{"[", "hull", "]"}], "]"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"hull", ",", 
+          RowBox[{"Length", "@", "data"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Frame", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"True", ",", "True", ",", "False", ",", "False"}], "}"}]}], ",", 
+    RowBox[{"FrameLabel", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Infections averted\>\"", ",", "\"\<Vaccines administered\>\""}], 
+      "}"}]}], ",", 
+    RowBox[{"FrameStyle", "\[Rule]", "Black"}], ",", 
+    RowBox[{"FrameTicks", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "2500000", ",", "500000"}], "]"}], ",", "None"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "35000", ",", "5000"}], "]"}], ",", "None"}], 
+        "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"PlotRange", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "10000"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "500000"}], ",", "2500000"}], "}"}]}], "}"}]}], ",", 
+    RowBox[{"PlotStyle", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"GrayLevel", "[", "0.75", "]"}], ",", "Black"}], "}"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7112260371408253`*^9, 3.7112261106170483`*^9}, 
+   3.7112263436603136`*^9, {3.711299919469479*^9, 3.711299945352968*^9}, {
+   3.711300161196703*^9, 3.7113001899828796`*^9}, {3.7113018154118176`*^9, 
+   3.7113018392722263`*^9}, 3.7118215635211678`*^9, {3.711821608660658*^9, 
+   3.711821660201234*^9}, {3.711821720636977*^9, 3.711821747139005*^9}, {
+   3.711821782851633*^9, 3.7118218497536883`*^9}, {3.7118224743178253`*^9, 
+   3.711822514983338*^9}, {3.7118225665967903`*^9, 3.711822763656763*^9}, {
+   3.71182290163943*^9, 3.7118230244859643`*^9}, {3.711823059216321*^9, 
+   3.7118231995522404`*^9}, {3.711823259743108*^9, 3.7118233277814083`*^9}, {
+   3.711823716123661*^9, 3.711823724480368*^9}, {3.7118237571688786`*^9, 
+   3.711823764422667*^9}, {3.71182382879086*^9, 3.7118238352608213`*^9}, {
+   3.7118239512165213`*^9, 3.7118239640612416`*^9}, {3.711824016537157*^9, 
+   3.7118240174113207`*^9}, {3.7118240700725126`*^9, 3.711824072863843*^9}, 
+   3.7118242067450275`*^9, {3.7118245181845865`*^9, 3.7118245404248686`*^9}, {
+   3.711824870576995*^9, 3.7118248718040695`*^9}, {3.711878581047245*^9, 
+   3.711878593731648*^9}, {3.711878801483762*^9, 3.711878806428192*^9}, 
+   3.7118789320637894`*^9, {3.7118790908556967`*^9, 3.71187909168382*^9}, 
+   3.7118801917611704`*^9, {3.711880236230627*^9, 3.711880240759961*^9}, {
+   3.713266005735589*^9, 3.7132660423856573`*^9}, {3.71439289631361*^9, 
+   3.7143929330587053`*^9}, 
+   3.7153509856607094`*^9},ExpressionUUID->"7d3e7bec-a471-42d3-bf6b-\
+d7657b308305"],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   ListPlot[{
+     Part[$CellContext`computedResults, All, 
+      Span[1, 2]], 
+     Table[
+      Callout[
+       Style[
+        Part[$CellContext`data, $CellContext`hull, 
+         Span[1, 2]], 
+        If[
+         StringContainsQ[
+          Part[$CellContext`data, $CellContext`hull, 3], "M/F"], Black, Red]], 
+       Part[
+        StringSplit[
+         Part[$CellContext`data, $CellContext`hull, 3], " "], 2], 
+       Part[$CellContext`data, $CellContext`hull, 
+         Span[1, 2]] + 
+       Part[$CellContext`leaderLength, $CellContext`hull]], \
+{$CellContext`hull, 
+       Length[$CellContext`data]}]}, Frame -> {True, True, False, False}, 
+    FrameLabel -> {"Infections averted", "Vaccines administered"}, FrameStyle -> 
+    Black, FrameTicks -> {{
+       Range[0, 2500000, 500000], None}, {
+       Range[0, 35000, 5000], None}}, 
+    PlotRange -> {{0, 10000}, {-500000, 2500000}}, PlotStyle -> {
+      GrayLevel[0.75], Black}], StandardForm],
+  ImageSizeCache->{360., {104., 109.}}]], "Output",
+ CellChangeTimes->{{3.7143929176919017`*^9, 3.7143929342943335`*^9}, 
+   3.715350995227234*^9, 
+   3.7153510990801463`*^9},ExpressionUUID->"ed615155-612a-41fc-b082-\
+88b5cc604fa3"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -8805,6 +10678,122 @@ Cell[368258, 7465, 1053, 27, 88, "Input", "ExpressionUUID" -> \
 Cell[369314, 7494, 56015, 998, 521, 16353, 347, "CachedBoxData", "BoxData", \
 "Output", "ExpressionUUID" -> "4be11900-ce58-4ece-ad4e-73816e75a062"]
 }, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[425402, 8500, 226, 4, 56, "Section", "ExpressionUUID" -> \
+"366b1142-1dda-4158-928d-26d37c1c3465"],
+Cell[CellGroupData[{
+Cell[425653, 8508, 198, 3, 49, "Subsection", "ExpressionUUID" -> \
+"0501b779-924e-4a26-945a-57bad2e10798"],
+Cell[CellGroupData[{
+Cell[425876, 8515, 166, 3, 39, "Subsubsection", "ExpressionUUID" -> \
+"13b7757c-22b1-40bc-8123-c2b6d24d5dea"],
+Cell[426045, 8520, 161, 3, 30, "Text", "ExpressionUUID" -> \
+"b7e3fdab-3314-4410-938f-2a010f82132e"],
+Cell[CellGroupData[{
+Cell[426231, 8527, 430, 9, 30, "Input", "ExpressionUUID" -> \
+"11b2f4a7-da77-4464-a17a-f43fa23c793b"],
+Cell[426664, 8538, 591, 9, 30, "Output", "ExpressionUUID" -> \
+"33199db5-0501-45de-9a05-f7084bc86e32"]
+}, Open  ]],
+Cell[427270, 8550, 434, 10, 30, "Input", "ExpressionUUID" -> \
+"b10225c9-0357-4915-a8a2-d62b8c1aad4d"],
+Cell[427707, 8562, 158, 3, 30, "Text", "ExpressionUUID" -> \
+"32477056-e01f-4abf-8734-5cb4c5452e16"],
+Cell[427868, 8567, 436, 10, 30, "Input", "ExpressionUUID" -> \
+"4bdf3be9-44f8-4900-ba44-94d6a4160c51"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[428341, 8582, 155, 3, 39, "Subsubsection", "ExpressionUUID" -> \
+"83f3fbbe-96b3-4721-8e0b-ab9d38d17e8a"],
+Cell[428499, 8587, 319, 8, 30, "Input", "ExpressionUUID" -> \
+"9169ff53-fdea-4596-a5d5-b5088c2960c8"],
+Cell[CellGroupData[{
+Cell[428843, 8599, 903, 25, 30, "Input", "ExpressionUUID" -> \
+"1da98e61-3456-43eb-935e-962cb28d5c8b"],
+Cell[429749, 8626, 27993, 731, 234, "Output", "ExpressionUUID" -> \
+"bbd04d83-9d51-4588-a948-88bb009792d7"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[457791, 9363, 172, 3, 39, "Subsubsection", "ExpressionUUID" -> \
+"91fbd5b6-ded2-4997-a77d-05b98d390a62"],
+Cell[457966, 9368, 216, 5, 30, "Text", "ExpressionUUID" -> \
+"41f62895-a041-4094-9962-cfdfad830d69"],
+Cell[CellGroupData[{
+Cell[458207, 9377, 321, 7, 30, "Input", "ExpressionUUID" -> \
+"663f957a-81ea-4e3e-ade4-32e0e44bc6b1"],
+Cell[458531, 9386, 489, 11, 30, "Output", "ExpressionUUID" -> \
+"959b5777-5434-400f-b620-b340c4536f4f"]
+}, Open  ]],
+Cell[459035, 9400, 166, 3, 30, "Text", "ExpressionUUID" -> \
+"13149ee8-ec42-4da0-8d55-b31844a588eb"],
+Cell[459204, 9405, 353, 8, 30, "Input", "ExpressionUUID" -> \
+"08ffc239-6acb-4548-bf0c-a64f741d9c12"],
+Cell[CellGroupData[{
+Cell[459582, 9417, 191, 5, 30, "Input", "ExpressionUUID" -> \
+"16949a76-7e2c-406e-80af-e300c00be92f"],
+Cell[459776, 9424, 436, 9, 30, "Output", "ExpressionUUID" -> \
+"9a94c4e6-8112-45cd-a568-eaf3763bdff3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[460249, 9438, 897, 26, 30, "Input", "ExpressionUUID" -> \
+"254e4a78-46d9-4956-bf0b-614c04d51672"],
+Cell[461149, 9466, 476, 11, 30, "Output", "ExpressionUUID" -> \
+"3e2c9fe6-d75f-4d4e-818d-442839de9fd7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[461662, 9482, 236, 7, 30, "Input", "ExpressionUUID" -> \
+"cd72e27b-9026-4d5e-b416-e8965298ba13"],
+Cell[461901, 9491, 507, 10, 23, "Message", "ExpressionUUID" -> \
+"06734689-98c9-4594-9c7e-486fe07763f6"],
+Cell[462411, 9503, 505, 10, 23, "Message", "ExpressionUUID" -> \
+"e3e25e05-a55b-44af-8e51-d99580c41c76"],
+Cell[462919, 9515, 507, 10, 23, "Message", "ExpressionUUID" -> \
+"30c272b6-c457-4174-b0fd-46970db531cd"],
+Cell[463429, 9527, 567, 11, 21, "Message", "ExpressionUUID" -> \
+"f99aa35f-eea4-4461-b40b-87d464cb2c97"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[464033, 9543, 225, 6, 30, "Input", "ExpressionUUID" -> \
+"802b5e7f-9f1a-45f9-86ff-7825e257dc47"],
+Cell[464261, 9551, 469, 13, 30, "Output", "ExpressionUUID" -> \
+"65157896-748a-4073-ba37-8fb14ec2704d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[464767, 9569, 1350, 37, 69, "Input", "ExpressionUUID" -> \
+"cdb69c81-44cd-46a3-b058-f97659424278"],
+Cell[466120, 9608, 2961, 90, 123, "Output", "ExpressionUUID" -> \
+"e34fbd4e-fa1b-4213-9faf-f419cea0ed56"]
+}, Open  ]],
+Cell[469096, 9701, 4128, 124, 159, "Input", "ExpressionUUID" -> \
+"c548d198-f6a0-4929-853f-430701f21645"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[473273, 9831, 186, 3, 49, "Subsection", "ExpressionUUID" -> \
+"f5b48d94-4b63-4b90-a633-baae29f85dcb"],
+Cell[CellGroupData[{
+Cell[473484, 9838, 9688, 273, 468, "Input", "ExpressionUUID" -> \
+"ac621e09-d68b-4ef9-a6d8-24582929f6dd"],
+Cell[483175, 10113, 3576, 79, 139, "Output", "ExpressionUUID" -> \
+"d21de852-2091-4a71-bd72-88424fac345e"]
+}, Open  ]],
+Cell[486766, 10195, 228, 5, 30, "Text", "ExpressionUUID" -> \
+"29419a6c-6385-46c7-9dd4-699890eef82c"],
+Cell[CellGroupData[{
+Cell[487019, 10204, 363, 10, 30, "Input", "ExpressionUUID" -> \
+"9eff08e2-1a2c-463a-b7f8-274188f22bec"],
+Cell[487385, 10216, 276, 7, 30, "Output", "ExpressionUUID" -> \
+"3eadc0b8-8070-421c-af53-c9f0035c106d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[487698, 10228, 4554, 105, 202, "Input", "ExpressionUUID" -> \
+"7d3e7bec-a471-42d3-bf6b-d7657b308305"],
+Cell[492255, 10335, 1220, 31, 228, "Output", "ExpressionUUID" -> \
+"ed615155-612a-41fc-b082-88b5cc604fa3"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
