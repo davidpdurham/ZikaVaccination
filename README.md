@@ -63,4 +63,6 @@ Data for Figures 4-6, which plot age-specific vaccination strategies, are genera
 
 ## Uncertainty analysis
 ### Figure 2 and Table 1
-The data for Figure 2 and Table 1 (impact and confidence intervals of increasing coverage) are generated on the HPC using the code in the subdirectory "GeneratedResults/Uncertainty/src". The data are located in zip files in the directory "GeneratedResults/Uncertainty".
+The code to generate Figure 2 and Table 1 (impact and confidence intervals of increasing coverage) are located in the file "GenerateZikaResults.nb" in the section "Run uncertainty analysis". 
+
+The data for Figure 2 and Table 1  are generated on the HPC using the code in the subdirectory "GeneratedResults/Uncertainty/src". The data are located in zip files in the directory "GeneratedResults/Uncertainty". These figure
