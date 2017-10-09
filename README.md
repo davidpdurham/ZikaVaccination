@@ -62,4 +62,5 @@ Data for the figures plotting vaccine impact under pre-existing immunity (Figure
 Data for Figures 4-6, which plot age-specific vaccination strategies, are generated in the section "Run age-specific scenarios" of the file "GenerateZikaResults.nb". These code are run on the HPC, following the specific code blocks generated in the package "GenerateZikaResults.m".
 
 ## Uncertainty analysis
-
+### Figure 2 and Table 1
+The data for Figure 2 and Table 1 (impact and confidence intervals of increasing coverage) are generated on the HPC using the code in the subdirectory "GeneratedResults/Uncertainty/src". The data are located in zip files in the directory "GeneratedResults/Uncertainty".
