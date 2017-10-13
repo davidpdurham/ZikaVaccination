@@ -5024,14 +5024,15 @@ Cell[BoxData[{
        RowBox[{"#", "\[Rule]", 
         RowBox[{"Get", "[", 
          RowBox[{"\"\<results_\>\"", "<>", "#", "<>", "\"\<.dat\>\""}], 
-         "]"}]}], ")"}], "&"}], "/@", 
-     RowBox[{"{", "\"\<Puerto Rico\>\"", "}"}]}], 
-    RowBox[{"(*", "CountryNames", "*)"}], "]"}]}], 
+         "]"}]}], ")"}], "&"}], "/@", "CountryNames"}], 
+    RowBox[{"(*", 
+     RowBox[{"{", "\"\<Puerto Rico\>\"", "}"}], "*)"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"SetDirectory", "[", 
    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.7117939526526217`*^9, 3.7117939556248856`*^9}},
+ CellChangeTimes->{{3.7117939526526217`*^9, 3.7117939556248856`*^9}, {
+  3.71690922363122*^9, 3.7169092270302334`*^9}},
  ExpressionUUID -> "b9868ac3-b782-4e87-ae2b-542843cf8285"],
 
 Cell[BoxData["\<\"D:\\\\Dropbox\\\\Code\\\\Git\\\\ZikaVaccineModel\\\\\
@@ -5041,7 +5042,8 @@ GeneratedResults\\\\PriorRcontours\"\>"], "Output",
   3.714388762513298*^9, 3.7143892037058125`*^9, 3.7143892468708544`*^9, 
   3.7143893034458313`*^9, 3.714389530927227*^9, 3.7143901746458774`*^9, 
   3.714390247817876*^9, 3.7153498818908167`*^9, 3.7164920790845337`*^9, 
-  3.7167562378361454`*^9, 3.7168069477600355`*^9, 3.7169073257264285`*^9},
+  3.7167562378361454`*^9, 3.7168069477600355`*^9, 3.7169073257264285`*^9, 
+  3.716909227802513*^9},
  ExpressionUUID -> "6265dcd9-2da1-4267-af4b-ae88979da9ff"]
 }, Open  ]],
 
@@ -5075,7 +5077,7 @@ Cell[BoxData[
    3.7143892476728263`*^9, 3.7143893043418665`*^9, 3.7143895316896763`*^9, 
    3.7143901755927887`*^9, {3.7143902423534665`*^9, 3.714390248609207*^9}, 
    3.7153498901098595`*^9, 3.7164920973886137`*^9, 3.7167562392002172`*^9, 
-   3.7168069479360456`*^9, 3.7169073258595552`*^9},
+   3.7168069479360456`*^9, 3.7169073258595552`*^9, 3.7169092298980474`*^9},
  ExpressionUUID -> "c87aee87-6a35-4c84-aea7-ab3a4702fa69"]
 }, Open  ]],
 
@@ -5098,7 +5100,8 @@ Cell[BoxData[
    3.7143892071088285`*^9, 3.7143892483538213`*^9, 3.7143893049588623`*^9, 
    3.714389532267683*^9, 3.714390176327493*^9, {3.714390244711876*^9, 
    3.7143902491963806`*^9}, 3.7153498910179443`*^9, 3.716492099245718*^9, 
-   3.716756240174198*^9, 3.7168069479470763`*^9, 3.7169073258595552`*^9},
+   3.716756240174198*^9, 3.7168069479470763`*^9, 3.7169073258595552`*^9, 
+   3.7169092312052593`*^9},
  ExpressionUUID -> "98c298dc-f4d2-4938-8c2f-3431a5d208f1"]
 }, Open  ]],
 
@@ -5126,7 +5129,8 @@ Cell[BoxData[
    3.7143892077618437`*^9, {3.714389241224822*^9, 3.7143892489538283`*^9}, 
    3.714389306295863*^9, 3.714389532892685*^9, 3.7143901770736256`*^9, 
    3.714390249797866*^9, 3.715349892335123*^9, 3.7164921007080193`*^9, 
-   3.7167562413526273`*^9, 3.716806948006028*^9, 3.7169073258752155`*^9},
+   3.7167562413526273`*^9, 3.716806948006028*^9, 3.7169073258752155`*^9, 
+   3.7169092320487647`*^9},
  ExpressionUUID -> "adbd94e1-544e-4bc6-b4b1-25504360ce88"]
 }, Open  ]],
 
@@ -5152,7 +5156,7 @@ Cell[BoxData[
    3.7143892497128506`*^9}, 3.7143893086738605`*^9, 3.7143895335855527`*^9, 
    3.714390177639919*^9, 3.7143902503871365`*^9, 3.7153498935173326`*^9, 
    3.716492101989256*^9, 3.716756242400738*^9, 3.716806948015026*^9, 
-   3.7169073258752155`*^9},
+   3.7169073258752155`*^9, 3.7169092325813537`*^9},
  ExpressionUUID -> "501bf9ff-4862-49b1-a38f-e61edcbae76e"]
 }, Open  ]],
 
@@ -5183,7 +5187,8 @@ Cell[BoxData[
    3.714389208953846*^9, {3.7143892438708496`*^9, 3.714389250230857*^9}, 
    3.7143893092728324`*^9, 3.714389534224266*^9, 3.714390178164511*^9, 
    3.7143902509120445`*^9, 3.7153498947663717`*^9, 3.7164921031703744`*^9, 
-   3.7167562434060307`*^9, 3.7168069480390577`*^9, 3.7169073258908353`*^9},
+   3.7167562434060307`*^9, 3.7168069480390577`*^9, 3.7169073258908353`*^9, 
+   3.716909233268826*^9},
  ExpressionUUID -> "5842a7b7-dacd-4e39-a8e0-590e5075b4c7"]
 }, Open  ]]
 }, Closed]],
@@ -5195,31 +5200,100 @@ Cell["Add in 0 attack rate data for contour plotting", "Subsubsection",
  ExpressionUUID -> "7fc4f876-76b3-45f3-b7cd-0c6f423859a7"],
 
 Cell[BoxData[
- RowBox[{
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"contourResults", "[", "\"\<Puerto Rico\>\"", "]"}], "=", 
-   RowBox[{"Join", "[", 
+   RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"contourResults", "[", "\"\<Puerto Rico\>\"", "]"}], ",", 
-     RowBox[{"Flatten", "[", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"Association", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"\"\<attR\>\"", "\[Rule]", "attR"}], ",", 
-           RowBox[{"\"\<vrate\>\"", "\[Rule]", "vrate"}], ",", 
-           RowBox[{"\"\<priorR\>\"", "\[Rule]", "priorR"}], ",", 
-           "\[IndentingNewLine]", 
-           RowBox[{"\"\<Results\>\"", "\[Rule]", "\[IndentingNewLine]", 
-            RowBox[{"With", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{"dummyResult", "=", 
-                RowBox[{
-                 RowBox[{"First", "[", 
-                  RowBox[{"Select", "[", 
-                   RowBox[{
+     RowBox[{"contourResults", "[", "country", "]"}], "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"contourResults", "[", "country", "]"}], ",", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Association", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\"\<attR\>\"", "\[Rule]", "attR"}], ",", 
+             RowBox[{"\"\<vrate\>\"", "\[Rule]", "vrate"}], ",", 
+             RowBox[{"\"\<priorR\>\"", "\[Rule]", "priorR"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"\"\<Results\>\"", "\[Rule]", "\[IndentingNewLine]", 
+              RowBox[{"With", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"dummyResult", "=", 
+                  RowBox[{
+                   RowBox[{"First", "[", 
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    RowBox[{"contourResults", "[", "country", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", "\"\<vrate\>\"", "]"}], "\[Equal]", 
+                    "vrate"}], "&&", 
+                    RowBox[{
+                    RowBox[{"#", "[", "\"\<priorR\>\"", "]"}], "\[Equal]", 
+                    "priorR"}]}], ")"}], "&"}]}], "]"}], "]"}], "[", 
+                   "\"\<Results\>\"", "]"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Association", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<vaccines\>\"", "\[Rule]", 
+                    RowBox[{"dummyResult", "[", "\"\<vaccines\>\"", "]"}]}], 
+                   ",", 
+                   RowBox[{"\"\<prenatalInfections\>\"", "\[Rule]", "0.1"}], 
+                   ",", 
+                   RowBox[{"\"\<pregnancies\>\"", "\[Rule]", 
+                    RowBox[{
+                    "dummyResult", "[", "\"\<pregnancies\>\"", "]"}]}], ",", 
+                   RowBox[{"\"\<population\>\"", "\[Rule]", 
+                    RowBox[{
+                    "dummyResult", "[", "\"\<population\>\"", "]"}]}]}], 
+                  "}"}], "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+            "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"attR", ",", 
+            RowBox[{"{", "0", "}"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"vrate", ",", "vrateRange"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"priorR", ",", "priorRRange"}], "}"}]}], "]"}], "]"}]}], 
+      "]"}]}], "\[IndentingNewLine]", ")"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"country", ",", "CountryNames"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.716909242781845*^9, 3.716909268693164*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"contourResults", "[", "\"\<Puerto Rico\>\"", "]"}], "=", 
+    RowBox[{"Join", "[", 
+     RowBox[{
+      RowBox[{"contourResults", "[", "\"\<Puerto Rico\>\"", "]"}], ",", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Association", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\"\<attR\>\"", "\[Rule]", "attR"}], ",", 
+            RowBox[{"\"\<vrate\>\"", "\[Rule]", "vrate"}], ",", 
+            RowBox[{"\"\<priorR\>\"", "\[Rule]", "priorR"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Results\>\"", "\[Rule]", "\[IndentingNewLine]", 
+             RowBox[{"With", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"dummyResult", "=", 
+                 RowBox[{
+                  RowBox[{"First", "[", 
+                   RowBox[{"Select", "[", 
+                    RowBox[{
                     RowBox[{
                     "contourResults", "[", "\"\<Puerto Rico\>\"", "]"}], ",", 
                     RowBox[{
@@ -5231,31 +5305,32 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"#", "[", "\"\<priorR\>\"", "]"}], "\[Equal]", 
                     "priorR"}]}], ")"}], "&"}]}], "]"}], "]"}], "[", 
-                 "\"\<Results\>\"", "]"}]}], "}"}], ",", 
-              "\[IndentingNewLine]", 
-              RowBox[{"Association", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\"\<vaccines\>\"", "\[Rule]", 
-                  RowBox[{"dummyResult", "[", "\"\<vaccines\>\"", "]"}]}], 
-                 ",", 
-                 RowBox[{"\"\<prenatalInfections\>\"", "\[Rule]", "0.1"}], 
-                 ",", 
-                 RowBox[{"\"\<pregnancies\>\"", "\[Rule]", 
-                  RowBox[{"dummyResult", "[", "\"\<pregnancies\>\"", "]"}]}], 
-                 ",", 
-                 RowBox[{"\"\<population\>\"", "\[Rule]", 
-                  RowBox[{"dummyResult", "[", "\"\<population\>\"", "]"}]}]}],
-                 "}"}], "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
-          "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"attR", ",", 
-          RowBox[{"{", "0", "}"}]}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"vrate", ",", "vrateRange"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"priorR", ",", "priorRRange"}], "}"}]}], "]"}], "]"}]}], 
-    "]"}]}], ";"}]], "Input",
+                  "\"\<Results\>\"", "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Association", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"\"\<vaccines\>\"", "\[Rule]", 
+                   RowBox[{"dummyResult", "[", "\"\<vaccines\>\"", "]"}]}], 
+                  ",", 
+                  RowBox[{"\"\<prenatalInfections\>\"", "\[Rule]", "0.1"}], 
+                  ",", 
+                  RowBox[{"\"\<pregnancies\>\"", "\[Rule]", 
+                   RowBox[{"dummyResult", "[", "\"\<pregnancies\>\"", "]"}]}],
+                   ",", 
+                  RowBox[{"\"\<population\>\"", "\[Rule]", 
+                   RowBox[{
+                   "dummyResult", "[", "\"\<population\>\"", "]"}]}]}], "}"}],
+                 "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+           "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"attR", ",", 
+           RowBox[{"{", "0", "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"vrate", ",", "vrateRange"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"priorR", ",", "priorRRange"}], "}"}]}], "]"}], "]"}]}], 
+     "]"}]}], ";"}], "*)"}]], "Input",
  CellChangeTimes->{{3.7143890356098137`*^9, 3.7143890404778185`*^9}, {
   3.7143891850538497`*^9, 3.7143891865108404`*^9}, {3.7143892289738536`*^9, 
   3.714389233156822*^9}, {3.7143894557908382`*^9, 3.714389526607656*^9}, {
@@ -5884,8 +5959,8 @@ Cell[BoxData[{
    3.716907998215337*^9}, {3.7169080380493093`*^9, 3.7169080413513403`*^9}, {
    3.7169080859923124`*^9, 3.7169081335593157`*^9}},
  ExpressionUUID -> "efe802b3-6b37-4368-9622-fb2b62c7a191"]
-}, Open  ]]
-}, Open  ]],
+}, Closed]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -5937,7 +6012,7 @@ Fetnc+w8VP9KexN1+eNcQeft2R3YH0yLWAT3F4xvxmz6OuLkcfvHZtXXhZRn
 wN0N4wenV/jHLdpv314U+D/9QR/cXTC+3O9tZ26u2GAf+Tu69ldcM9xeGB9G
 W/F6eJWJVtjDUgYAczYAqg==
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34011, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$36680, {
                     1}}]& ], 
                     TagBox[{
                     Hue[0.9060679774997897, 0.6, 0.6], 
@@ -5955,7 +6030,7 @@ UT152n6ml+WyVXe32Usd9BSe+P2UfZm67ILNjVvh7riwwNjdVX2D/Uz9tJjY
 N8eh4ivtPWKkl0Y7H7GPEr4jIam6Am4vjL/kIrOw8LVD9m9NmL79ezQPbi+M
 zxHl29XTusV+bcHUzFkJk+Hmwvgw+v7mtPRq8Q57WMwDAOeL6NU=
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34011, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$36680, {
                     2}}]& ], 
                     TagBox[{
                     Hue[0.1421359549995791, 0.6, 0.6], 
@@ -5972,7 +6047,7 @@ nkpLH7Hvmnv2blPfQbi60wLTVnjO2WM/+/sW7dsbD0LN32lf7HmYJ7htv73O
 +lrhS6zb7Dlatson6u61D+tPn1RYvwWuzuvawpXH3q63d6qeKticvw0qvtLe
 a1f0b2vPtfbXnqh+/WG5Ai4O48Po87Hi4vfk5tnDYg4AVLnP6Q==
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34011, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$36680, {
                     3}}]& ], 
                     TagBox[{
                     Hue[0.37820393249936934`, 0.6, 0.6], 
@@ -5988,7 +6063,7 @@ ojOd3hrPP2Tf9MjHgf3sTfvUhWeehp85ZG/tr9vyseIW3J8Tpt4p3Sd0x37t
 QuGH/suP2J89AwJ37A8l7DDS4jxq33Lu5NznKffsdafN/56ceQzq/gf2W7hX
 ntvjetweAKb2oD4=
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34011, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$36680, {
                     4}}]& ], 
                     TagBox[{
                     Hue[0.6142719099991583, 0.6, 0.6], 
@@ -6003,18 +6078,17 @@ ntvjetweAKb2oD4=
                     0.426201700781947, 0.07379829921805302}, {0.45, 
                     0.08144124556744735}, {0.4630024025504179, 
                     0.08699759744958209}, {0.5, 0.0988137567944347}}]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34011, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$36680, {
                     5}}]& ], 
                     TagBox[{
                     Hue[0.8503398874989481, 0.6, 0.6], 
                     Directive[
                     Opacity[0]], 
-                    
                     LineBox[{{0.40401939459280384`, 0.}, {0.4360648859398921, 
                     0.01393511406010789}, {0.45, 0.01877405132051197}, {
                     0.4721441940621579, 0.027855805937842076`}, {0.5, 
                     0.03762004181812415}}]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34011, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$36680, {
                     6}}]& ]}}, {}, {{{{}}}, {{{{
                     Directive[
                     GrayLevel[1], 
@@ -6398,7 +6472,6 @@ q6ucr1mv+hvb+YY3rDwriA==
                     0.4798033352457564, 0.17035311244085338`, 
                     0.17085220123590614`], 
                     GraphicsGroupBox[{
-                    
                     PolygonBox[{{169, 13, 170}, {27, 36, 35}, {219, 35, 
                     221}, {191, 26, 190}, {189, 25, 187}, {172, 15, 168}, {26,
                      27, 35}, {188, 24, 197}, {174, 14, 175}, {168, 15, 
@@ -6462,7 +6535,8 @@ q6ucr1mv+hvb+YY3rDwriA==
                     Part[{{Identity, Identity}, {Identity, Identity}}, 2, 
                     2][#]& )[
                     Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-                    (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 
+                    (
+                    Part[{{Identity, Identity}, {Identity, Identity}}, 1, 
                     2][#]& )[
                     Part[#, 1]], 
                     (
@@ -6492,7 +6566,7 @@ l9h+1N5nRtNey2nb7G9vtlN8vOWIvfrJsE2Mslvh9kz7khMcYb7BPkD+cf7b
 2oNQ/Svtjzd9Czuas9t+usguw6VTV8DNhfElrq9MnS++076GK+OknMZCuD4Y
 H0Z3TjTceiNguj0sZgFjoe7i
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34342, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37011, {
                     1}}]& ], 
                     TagBox[{
                     Hue[0.9060679774997897, 0.6, 0.6], 
@@ -6510,7 +6584,7 @@ ffy+b0PBQbj4obuPX1/y3m//7tznKfpuB+3VkiSuLSjea1/a8bA1um4/1J6d
 7GwPvXRnE1TdSvu7PHcXn76wzj5cLaw/PWkJXNwm0sisLrPHfu+MzSFng5bb
 w2IOACGx3g0=
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34342, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37011, {
                     2}}]& ], 
                     TagBox[{
                     Hue[0.1421359549995791, 0.6, 0.6], 
@@ -6526,7 +6600,7 @@ huz1P/z4kD2fvMu3yZtv2vto3Ku0+3/I/nSDeHeC2C24P3N+lOhuun3b/vvt
 R4UZokftz54BgTv2J14HxWxrP2rPMkH/vbTKPXsd4Sshv18dg7r/gX21/VLu
 t6eP2wMA67OarA==
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34342, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37011, {
                     3}}]& ], 
                     TagBox[{
                     Hue[0.37820393249936934`, 0.6, 0.6], 
@@ -6538,7 +6612,7 @@ t6eP2wMA67OarA==
                     0.43347033588995093`, 0.016529664110049073`}, {0.45, 
                     0.02207661371141085}, {0.4689033110215057, 
                     0.03109668897849432}, {0.5, 0.041496165837154944`}}]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34342, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37011, {
                     4}}]& ]}}, {}, {{{{}}}, {{{{
                     Directive[
                     GrayLevel[1], 
@@ -6827,7 +6901,6 @@ KZhOgKq51adRmpGtcigaglSycgIviQUhL+q8QLAMy6k0zhiiKZniA6P3kk8=
                     24}, {5, 6, 14}, {214, 36, 215}, {158, 3, 156}, {185, 24, 
                     189}, {176, 17, 173}, {156, 3, 157}, {170, 13, 171}, {174,
                      14, 175}, {14, 13, 5}, {25, 16, 17}}], 
-                    
                     PolygonBox[{{171, 13, 14, 174}, {173, 17, 16, 172}, {168, 
                     15, 6, 160}, {196, 25, 26, 197}, {213, 35, 36, 214}, {192,
                      24, 25, 194}, {157, 3, 4, 159}, {197, 26, 35, 200}, {175,
@@ -6904,13 +6977,12 @@ yVNnNx2F2nvT3vm1J+flR8fsX1/ZNEOj5pb9d6X02dVXjtufPQMCd+xZ4q5M
 v/zphL1YhtPVIOa79hzJ6zp6dU7a/9hh5/r/xV24P1X0NbVT/O7bB1m7O1/8
 cwrq/gf2W84o9kT5nLYHAHWrw8s=
                     "]]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34627, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37296, {
                     1}}]& ], 
                     TagBox[{
                     Hue[0.9060679774997897, 0.6, 0.6], 
                     Directive[
                     Opacity[0]], 
-                    
                     LineBox[{{0.20194153137302728`, 0.}, {
                     0.22769286025405142`, 0.02230713974594859}, {0.25, 
                     0.030805107936006985`}, {0.2610107391607771, 
@@ -6923,7 +6995,7 @@ cwrq/gf2W84o9kT5nLYHAHWrw8s=
                     0.11557759636994884`}, {0.45, 0.11956364498955585`}, {
                     0.4695622594342158, 0.1304377405657842}, {0.5, 
                     0.1381235251029216}}]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34627, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37296, {
                     2}}]& ], 
                     TagBox[{
                     Hue[0.1421359549995791, 0.6, 0.6], 
@@ -6934,7 +7006,7 @@ cwrq/gf2W84o9kT5nLYHAHWrw8s=
                     0.01803587601048825}, {0.45, 0.02343515136568185}, {
                     0.4670606025839788, 0.03293939741602122}, {0.5, 
                     0.042916036895691165`}}]}, 
-                    Annotation[#, {{Callout}, Charting`Private`Tag$34627, {
+                    Annotation[#, {{Callout}, Charting`Private`Tag$37296, {
                     3}}]& ]}}, {}, {{{{}}}, {{{{
                     Directive[
                     GrayLevel[1], 
@@ -7187,8 +7259,7 @@ pCY=
                     Part[{{Identity, Identity}, {Identity, Identity}}, 2, 
                     2][#]& )[
                     Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-                    (
-                    Part[{{Identity, Identity}, {Identity, Identity}}, 1, 
+                    (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 
                     2][#]& )[
                     Part[#, 1]], 
                     (
@@ -7449,8 +7520,8 @@ dcNCHxsK0HhjyNcBAjhaXL6oyRLge12Ow5IQAfTnmf+IvS48F+VPpY+/CRDk
         DisplayFunction -> (#& ), 
         InterpretationFunction :> (RowBox[{"BarLegend", "[", 
            RowBox[{"\"CherryTones\"", ",", 
-             
-             RowBox[{"LegendLabel", "\[Rule]", 
+             RowBox[{
+              "LegendLabel", "\[Rule]", 
                "\" Zika infections per\\n  1000 pregnancies\""}], ",", 
              RowBox[{"LabelStyle", "\[Rule]", 
                RowBox[{"Directive", "[", 
@@ -7565,11 +7636,57 @@ dcNCHxsK0HhjyNcBAjhaXL6oyRLge12Ow5IQAfTnmf+IvS48F+VPpY+/CRDk
    3.716907706532277*^9, 3.716907718876278*^9}, 3.7169077888863087`*^9, {
    3.7169078979943314`*^9, 3.716907906145331*^9}, 3.7169079433053055`*^9, {
    3.7169079840293055`*^9, 3.7169080014603076`*^9}, {3.7169080441293097`*^9, 
-   3.7169080587183104`*^9}, {3.7169080923123126`*^9, 3.7169081369093156`*^9}},
+   3.7169080587183104`*^9}, {3.7169080923123126`*^9, 3.7169081369093156`*^9}, 
+   3.71690932021419*^9},
  ExpressionUUID -> "20fbb3d9-075e-42bf-94bf-14a70f256b04"]
 }, Open  ]]
-}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Generate plots for all countries", "Subsubsection",
+ CellChangeTimes->{{3.7132654138701873`*^9, 3.7132654156941137`*^9}, {
+  3.7169093242519913`*^9, 3.7169093296976247`*^9}},
+ ExpressionUUID -> "2d4caa09-4902-4235-ac56-33d4933ad8a0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{
+   RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+   "\"\<GeneratedFigures/ContourPlots\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.716909765297827*^9, 3.716909797002503*^9}}],
+
+Cell[BoxData["\<\"D:\\\\Dropbox\\\\Code\\\\Git\\\\ZikaVaccineModel\\\\\
+GeneratedFigures\\\\ContourPlots\"\>"], "Output",
+ CellChangeTimes->{3.716909797417184*^9}]
 }, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"figure", "=", 
+       RowBox[{"MasterPlotFigure2", "[", 
+        RowBox[{"country", ",", "True", ",", 
+         RowBox[{"{", 
+          RowBox[{
+          "5", ",", "10", ",", "25", ",", "100", ",", "200", ",", "300"}], 
+          "}"}], ",", "300", ",", "0.5"}], "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"\"\<Figure3_\>\"", "<>", "country", "<>", "\"\<.png\>\""}], 
+        ")"}], ",", "figure"}], "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"country", ",", "CountryNames"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7169098002000065`*^9, 3.7169098634488335`*^9}}]
+}, Closed]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -7677,8 +7794,8 @@ Cell[BoxData["192.41587609173658`"], "Output",
  ExpressionUUID -> "2b205e35-36ec-4096-8b38-8857c8df94d1"]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]],
+}, Closed]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -11768,7 +11885,6 @@ NrtdD7aC7dsRYuj4ZK+Wmrv/NrB9J46bOhb2nGiZ37zNQQRsn6WjSkJ6+Nr5
             Offset[{39., 6.5}, {5750.727519410159, 1.1358004499999997`*^6}], 
             Offset[{39., -6.5}, {5750.727519410159, 1.1358004499999997`*^6}], 
             Offset[{10., -6.5}, {5750.727519410159, 1.1358004499999997`*^6}], 
-            
             Offset[{10., 6.5}, {5750.727519410159, 
              1.1358004499999997`*^6}]}]}, {
           EdgeForm[], 
@@ -13309,6 +13425,7 @@ NrtdD7aC7dsRYuj4ZK+Wmrv/NrB9J46bOhb2nGiZ37zNQQRsn6WjSkJ6+Nr5
              
              Offset[{-10., -6.5}, {5410.424995686296, 
               2.0700008099999996`*^6}], 
+             
              Offset[{-39., -6.5}, {5410.424995686296, 
               2.0700008099999996`*^6}], 
              
@@ -16654,6 +16771,7 @@ Cell[BoxData[
                Opacity[0.]]], 
              RGBColor[
              0.7569306572612927, 0.5320601907167892, 0.35965843114092055`]], 
+            
             RectangleBox[{0., 14.}, {22.39363518860614, 15.}, 
              "RoundingRadius" -> 0]}}}, {}, {}}, {{}, {{}, {{
             Directive[
@@ -16680,7 +16798,6 @@ Cell[BoxData[
                Opacity[0.]]], 
              RGBColor[
              0.3841613648267191, 0.39503614087814587`, 0.5994070867471594]], 
-            
             RectangleBox[{0., 18.}, {33.27417938850374, 19.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -16828,6 +16945,7 @@ Cell[BoxData[
               Directive[
                Opacity[0.]]], 
              RGBColor[0.882734, 0.823682, 0.375036]], 
+            
             RectangleBox[{0., 39.}, {25.285181838303252`, 40.}, 
              "RoundingRadius" -> 0]}}}, {}, {}}, {{}, {{}, {{
             Directive[
@@ -16854,7 +16972,6 @@ Cell[BoxData[
                Opacity[0.]]], 
              RGBColor[
              0.3841613648267191, 0.39503614087814587`, 0.5994070867471594]], 
-            
             RectangleBox[{0., 43.}, {25.51531035816096, 44.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -17059,6 +17176,7 @@ Cell[BoxData[
               Directive[
                Opacity[0.]]], 
              RGBColor[0.882734, 0.823682, 0.375036]], 
+            
             RectangleBox[{0., 73.}, {24.781397462736418`, 74.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -17084,7 +17202,6 @@ Cell[BoxData[
                Opacity[0.]]], 
              RGBColor[
              0.7569306572612927, 0.5320601907167892, 0.35965843114092055`]], 
-            
             RectangleBox[{0., 77.}, {13.849024225513151`, 78.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -17290,6 +17407,7 @@ Cell[BoxData[
                Opacity[0.]]], 
              RGBColor[
              0.7569306572612927, 0.5320601907167892, 0.35965843114092055`]], 
+            
             RectangleBox[{0., 107.}, {12.320225648083532`, 108.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -17314,7 +17432,6 @@ Cell[BoxData[
               Directive[
                Opacity[0.]]], 
              RGBColor[0.684154, 0.875059, 0.95523]], 
-            
             RectangleBox[{0., 111.}, {8.905916854431352, 112.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -17518,6 +17635,7 @@ Cell[BoxData[
               Directive[
                Opacity[0.]]], 
              RGBColor[0.684154, 0.875059, 0.95523]], 
+            
             RectangleBox[{0., 141.}, {14.07798475571965, 142.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -17602,7 +17720,6 @@ Cell[BoxData[
               Directive[
                Opacity[0.]]], 
              RGBColor[0.882734, 0.823682, 0.375036]], 
-            
             RectangleBox[{0., 153.}, {23.34432384474051, 154.}, 
              "RoundingRadius" -> 0]}, {
             Directive[
@@ -18794,6 +18911,7 @@ Cell[BoxData[
                    Directive[
                     Opacity[0.]]], 
                   RGBColor[0.882734, 0.823682, 0.375036]], 
+                 
                  RectangleBox[{0., 4.}, {38.608097510141704`, 5.}, 
                   "RoundingRadius" -> 0]}}}, {}, {}}, {{}, {{}, {{
                  Directive[
@@ -18849,6 +18967,7 @@ Cell[BoxData[
                   RGBColor[
                   0.3841613648267191, 0.39503614087814587`, 
                    0.5994070867471594]], 
+                 
                  RectangleBox[{0., 12.}, {12.795572010932085`, 13.}, 
                   "RoundingRadius" -> 0]}, {
                  Directive[
@@ -19460,6 +19579,7 @@ Cell[BoxData[
                    Directive[
                     Opacity[0.]]], 
                   RGBColor[0.684154, 0.875059, 0.95523]], 
+                 
                  RectangleBox[{0., 96.}, {11.206232046261608`, 97.}, 
                   "RoundingRadius" -> 0]}, {
                  Directive[
@@ -19515,6 +19635,7 @@ Cell[BoxData[
                   RGBColor[
                   0.3841613648267191, 0.39503614087814587`, 
                    0.5994070867471594]], 
+                 
                  RectangleBox[{0., 103.}, {20.82845111718744, 104.}, 
                   "RoundingRadius" -> 0]}, {
                  Directive[
@@ -19540,7 +19661,6 @@ Cell[BoxData[
                   RGBColor[
                   0.7569306572612927, 0.5320601907167892, 
                    0.35965843114092055`]], 
-                 
                  RectangleBox[{0., 107.}, {12.320225648083532`, 108.}, 
                   "RoundingRadius" -> 0]}, {
                  Directive[
@@ -19872,7 +19992,6 @@ Cell[BoxData[
                    Directive[
                     Opacity[0.]]], 
                   RGBColor[0.882734, 0.823682, 0.375036]], 
-                 
                  RectangleBox[{0., 153.}, {23.34432384474051, 154.}, 
                   "RoundingRadius" -> 0]}, {
                  Directive[
@@ -19928,7 +20047,6 @@ Cell[BoxData[
                   RGBColor[
                   0.7569306572612927, 0.5320601907167892, 
                    0.35965843114092055`]], 
-                 
                  RectangleBox[{0., 161.}, {8.697366495013458, 162.}, 
                   "RoundingRadius" -> 0]}, {
                  Directive[
@@ -20581,7 +20699,6 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     RGBColor[
                     0.3841613648267191, 0.39503614087814587`, 
                     0.5994070867471594]], 
-                    
                     RectangleBox[{0., 57.}, {6.016389836325741, 58.}, 
                     "RoundingRadius" -> 0]}, {
                     Directive[
@@ -20713,6 +20830,7 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     RGBColor[
                     0.74554349555234, 0.4235840817539198, 
                     0.5245495364470906]], 
+                    
                     RectangleBox[{0., 74.}, {9.056483619111876, 75.}, 
                     "RoundingRadius" -> 0]}}}, {}, {}}, {{}, {{}, {{
                     Directive[
@@ -20822,6 +20940,7 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     Directive[
                     Opacity[0.]]], 
                     RGBColor[0.684154, 0.875059, 0.95523]], 
+                    
                     RectangleBox[{0., 89.}, {17.146893549725032`, 90.}, 
                     "RoundingRadius" -> 0]}}}, {}, {}}, {{}, {{}, {{
                     Directive[
@@ -20963,7 +21082,6 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     Directive[
                     Opacity[0.]]], 
                     RGBColor[0.684154, 0.875059, 0.95523]], 
-                    
                     RectangleBox[{0., 108.}, {8.25009577026947, 109.}, 
                     "RoundingRadius" -> 0]}, {
                     Directive[
@@ -21183,7 +21301,6 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     RGBColor[
                     0.35888549171840817`, 0.5699605626501094, 
                     0.3102776974624467]], 
-                    
                     RectangleBox[{0., 137.}, {3.4582934855235257`, 138.}, 
                     "RoundingRadius" -> 0]}, {
                     Directive[
@@ -21315,6 +21432,7 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     RGBColor[
                     0.74554349555234, 0.4235840817539198, 
                     0.5245495364470906]], 
+                    
                     RectangleBox[{0., 154.}, {10.17007780186324, 155.}, 
                     "RoundingRadius" -> 0]}}}, {}, {}}, {{}, {{}, {{
                     Directive[
@@ -21615,8 +21733,7 @@ Republic\\\\\\\"\\\"}]\\)   \"", TraditionalForm], {0, 0}}}, Automatic}, {{{0,
                     GrayLevel[0]]], 
                     PointSize[0.5], 
                     AbsoluteThickness[1.6], 
-                    RGBColor[
-                    0.6017238272162821, 0.7482522952907897, 
+                    RGBColor[0.6017238272162821, 0.7482522952907897, 
                     0.49226160276824]], 
                     RectangleBox[{0, 0}, {10, 10}, "RoundingRadius" -> 0]}, 
                     AspectRatio -> Full, ImageSize -> {10, 10}, 
